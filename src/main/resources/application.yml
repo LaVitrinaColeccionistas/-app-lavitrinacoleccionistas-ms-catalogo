@@ -1,0 +1,58 @@
+server:
+  port: ${SERVER_PORT:8081}
+
+spring:
+  application:
+    name: ${APP_NAME:ms1-lvc-catalogo}
+  config:
+    import: optional:file:.env[.properties]
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: ${DB_POOL_MAX:10}
+      connection-timeout: ${DB_CONN_TIMEOUT:30000}
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+    enabled: ${LIQUIBASE_ENABLED:true}
+  jpa:
+    open-in-view: false
+    show-sql: false              # se loguea vía logger, no por stdout
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate.format_sql: ${SQL_FORMAT:true}
+      hibernate.jdbc.time_zone: ${APP_TIMEZONE:America/Asuncion}
+  data:
+    web:
+      pageable:
+        default-page-size: ${PAGE_SIZE_DEFAULT:20}
+        max-page-size: ${PAGE_SIZE_MAX:100}
+        one-indexed-parameters: false
+
+springdoc:
+  api-docs:
+    enabled: ${SWAGGER_ENABLED:true}
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: ${SWAGGER_ENABLED:true}
+    path: /swagger-ui.html
+
+logging:
+  file:
+    name: ${LOG_PATH:logs}/${spring.application.name}.log
+  logback:
+    rollingpolicy:
+      max-file-size: ${LOG_MAX_FILE_SIZE:10MB}
+      max-history: ${LOG_MAX_HISTORY:14}
+      total-size-cap: ${LOG_TOTAL_CAP:200MB}
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n"
+  level:
+    root: ${LOG_LEVEL_ROOT:INFO}
+    py.com.ms1lvccatalogo.Controller: ${LOG_LEVEL_CONTROLLER:INFO}
+    py.com.ms1lvccatalogo.Service: ${LOG_LEVEL_SERVICE:DEBUG}
+    py.com.ms1lvccatalogo.Repository: ${LOG_LEVEL_REPOSITORY:DEBUG}
+    org.hibernate.SQL: ${LOG_LEVEL_SQL:DEBUG}
