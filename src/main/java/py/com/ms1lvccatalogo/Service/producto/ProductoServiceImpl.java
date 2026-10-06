@@ -30,6 +30,15 @@ public class ProductoServiceImpl
     }
 
     @Override
+    @Transactional
+    public ProductoDTO crear(ProductoCreateDTO dto) {
+        if (dto.getNombre() == null || dto.getNombre().isBlank()) {
+            throw new IllegalArgumentException("nombre: es obligatorio");
+        }
+        return super.crear(dto);
+    }
+
+    @Override
     protected Producto buscarPorId(Long id) {
         Producto p = super.buscarPorId(id);
         if (!Boolean.TRUE.equals(p.getActivo())) {
@@ -50,7 +59,7 @@ public class ProductoServiceImpl
     @Override
     protected Page<Producto> buscarEntidades(ProductoFiltro f, Pageable pageable) {
         return productoRepository.buscarConFiltros(
-                f.idVendedor(), f.categoria(), f.rareza(), f.nombre(), pageable);
+                f.getIdVendedor(), f.getCategoria(), f.getRareza(), f.getNombre(), pageable);
     }
 
     @Override

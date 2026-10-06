@@ -1,18 +1,21 @@
 package py.com.ms1lvccatalogo.mapper;
 
-import org.springframework.stereotype.Component;
+import org.mapstruct.Mapper;
 
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.time.ZoneId;
 
-@Component
+@Mapper(componentModel = "spring")
 public class FechaMapper {
-    public OffsetDateTime map(LocalDateTime value) {
-        return value == null ? null : value.atZone(ZoneId.systemDefault()).toOffsetDateTime();
+
+    private static final ZoneId ZONA = ZoneId.of("America/Asuncion");
+
+    public OffsetDateTime toOffset(LocalDateTime fecha) {
+        return fecha == null ? null : fecha.atZone(ZONA).toOffsetDateTime();
     }
 
-    public LocalDateTime map(OffsetDateTime value) {
-        return value == null ? null : value.toLocalDateTime();
+    public LocalDateTime toLocal(OffsetDateTime fecha) {
+        return fecha == null ? null : fecha.atZoneSameInstant(ZONA).toLocalDateTime();
     }
 }

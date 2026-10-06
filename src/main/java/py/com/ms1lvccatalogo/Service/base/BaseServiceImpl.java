@@ -1,10 +1,10 @@
 package py.com.ms1lvccatalogo.Service.base;
 
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.transaction.annotation.Transactional;
 import py.com.lavitrinacoleccionistas.entity.BaseEntity;
 import py.com.ms1lvccatalogo.Repository.IBaseRepository;
 import py.com.ms1lvccatalogo.mapper.IBaseMapper;
@@ -18,7 +18,8 @@ public abstract class BaseServiceImpl<T extends BaseEntity, DC, DU, DO, F>
     protected final String nombreEntidad;
 
     protected BaseServiceImpl(IBaseRepository<T, Long> repository,
-                              IBaseMapper<T, DC, DU, DO> mapper, String nombreEntidad) {
+                              IBaseMapper<T, DC, DU, DO> mapper,
+                              String nombreEntidad) {
         this.repository = repository;
         this.mapper = mapper;
         this.nombreEntidad = nombreEntidad;
@@ -34,7 +35,7 @@ public abstract class BaseServiceImpl<T extends BaseEntity, DC, DU, DO, F>
     }
 
     @Override
-    @Transactional()
+    @Transactional(readOnly = true)
     public DO obtener(Long id) {
         log.debug("Obteniendo {} {}", nombreEntidad, id);
         return mapper.toDTO(buscarPorId(id));
@@ -54,6 +55,11 @@ public abstract class BaseServiceImpl<T extends BaseEntity, DC, DU, DO, F>
     public Page<DO> buscar(F filtro, Pageable pageable) {
         log.debug("Buscando {} filtro={}", nombreEntidad, filtro);
         return buscarEntidades(filtro, pageable).map(mapper::toDTO);
+    }
+
+    @Transactional(readOnly = true)
+    public T obtenerEntidad(Long id) {
+        return buscarPorId(id);
     }
 
     protected T buscarPorId(Long id) {
