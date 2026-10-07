@@ -3813,3 +3813,1124 @@ java.lang.IllegalArgumentException: nombre: es obligatorio
 2026-10-06 14:16:16.473 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-10-06 14:16:16.476 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-10-06 14:16:16.718 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-06 15:05:46.610 INFO  [restartedMain] p.c.m.Ms1LvcCatalogoApplication - Starting Ms1LvcCatalogoApplication using Java 25.0.4.1 with PID 14164 (C:\Users\DELL\Desktop\LaVitrinaColeccionistas\MS1-LVC-Catalogo\target\classes started by DELL in C:\Users\DELL\Desktop\LaVitrinaColeccionistas\MS1-LVC-Catalogo)
+2026-10-06 15:05:46.613 INFO  [restartedMain] p.c.m.Ms1LvcCatalogoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-06 15:05:46.679 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-06 15:05:46.679 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-06 15:05:47.307 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 15:05:47.350 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 5 JPA repository interfaces.
+2026-10-06 15:05:48.104 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-10-06 15:05:48.121 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-06 15:05:48.121 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-06 15:05:48.172 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1492 ms
+2026-10-06 15:05:48.301 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-06 15:05:49.016 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@755bd251
+2026-10-06 15:05:49.017 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-06 15:05:49.359 INFO  [restartedMain] liquibase.database - Set default schema name to public
+2026-10-06 15:05:50.961 INFO  [restartedMain] liquibase.changelog - Reading from public.databasechangelog
+2026-10-06 15:05:51.373 INFO  [restartedMain] liquibase.ui - Database is up to date, no changesets to execute
+2026-10-06 15:05:51.404 INFO  [restartedMain] liquibase.changelog - Reading from public.databasechangelog
+2026-10-06 15:05:51.447 INFO  [restartedMain] liquibase.util - UPDATE SUMMARY
+2026-10-06 15:05:51.447 INFO  [restartedMain] liquibase.util - Run:                          0
+2026-10-06 15:05:51.447 INFO  [restartedMain] liquibase.util - Previously run:              13
+2026-10-06 15:05:51.447 INFO  [restartedMain] liquibase.util - Filtered out:                 0
+2026-10-06 15:05:51.448 INFO  [restartedMain] liquibase.util - -------------------------------
+2026-10-06 15:05:51.448 INFO  [restartedMain] liquibase.util - Total change sets:           13
+2026-10-06 15:05:51.449 INFO  [restartedMain] liquibase.util - Update summary generated
+2026-10-06 15:05:51.451 INFO  [restartedMain] liquibase.command - Command execution complete
+2026-10-06 15:05:51.576 INFO  [restartedMain] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 15:05:51.648 INFO  [restartedMain] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-06 15:05:52.228 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 15:05:52.483 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://aws-0-sa-east-1.pooler.supabase.com:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.6
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 15:05:53.655 INFO  [restartedMain] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 15:05:53.661 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 15:05:53.728 INFO  [restartedMain] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-06 15:05:55.002 WARN  [restartedMain] o.s.b.s.a.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: 69ef9db9-e4af-4e8c-a89d-7f29a77bba00
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-10-06 15:05:55.008 INFO  [restartedMain] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-10-06 15:05:55.575 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-10-06 15:05:55.581 INFO  [restartedMain] p.c.m.Ms1LvcCatalogoApplication - Started Ms1LvcCatalogoApplication in 9.527 seconds (process running for 10.364)
+2026-10-06 15:06:14.454 INFO  [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-06 15:06:14.470 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-06 15:06:14.475 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 15:06:14.477 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-06 15:06:14.770 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-06 15:18:48.086 INFO  [restartedMain] p.c.m.Ms1LvcCatalogoApplication - Starting Ms1LvcCatalogoApplication using Java 25.0.4.1 with PID 18948 (C:\Users\DELL\Desktop\LaVitrinaColeccionistas\MS1-LVC-Catalogo\target\classes started by DELL in C:\Users\DELL\Desktop\LaVitrinaColeccionistas\MS1-LVC-Catalogo)
+2026-10-06 15:18:48.089 INFO  [restartedMain] p.c.m.Ms1LvcCatalogoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-06 15:18:48.157 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-06 15:18:48.157 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-06 15:18:48.926 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 15:18:49.032 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 5 JPA repository interfaces.
+2026-10-06 15:18:49.839 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-10-06 15:18:49.859 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-06 15:18:49.859 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-06 15:18:49.928 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1770 ms
+2026-10-06 15:18:50.091 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-06 15:18:51.613 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1e748957
+2026-10-06 15:18:51.615 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-06 15:18:52.054 INFO  [restartedMain] liquibase.database - Set default schema name to public
+2026-10-06 15:18:53.530 INFO  [restartedMain] liquibase.changelog - Reading from public.databasechangelog
+2026-10-06 15:18:53.986 INFO  [restartedMain] liquibase.ui - Database is up to date, no changesets to execute
+2026-10-06 15:18:54.024 INFO  [restartedMain] liquibase.changelog - Reading from public.databasechangelog
+2026-10-06 15:18:54.079 INFO  [restartedMain] liquibase.util - UPDATE SUMMARY
+2026-10-06 15:18:54.079 INFO  [restartedMain] liquibase.util - Run:                          0
+2026-10-06 15:18:54.079 INFO  [restartedMain] liquibase.util - Previously run:              13
+2026-10-06 15:18:54.079 INFO  [restartedMain] liquibase.util - Filtered out:                 0
+2026-10-06 15:18:54.081 INFO  [restartedMain] liquibase.util - -------------------------------
+2026-10-06 15:18:54.081 INFO  [restartedMain] liquibase.util - Total change sets:           13
+2026-10-06 15:18:54.082 INFO  [restartedMain] liquibase.util - Update summary generated
+2026-10-06 15:18:54.083 INFO  [restartedMain] liquibase.command - Command execution complete
+2026-10-06 15:18:54.234 INFO  [restartedMain] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 15:18:54.307 INFO  [restartedMain] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-06 15:18:54.777 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 15:18:55.061 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://aws-0-sa-east-1.pooler.supabase.com:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.6
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 15:18:56.262 INFO  [restartedMain] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 15:18:56.270 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 15:18:56.357 INFO  [restartedMain] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-06 15:18:57.739 WARN  [restartedMain] o.s.b.s.a.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: df3b4838-6de7-4db6-baeb-2b983ca14172
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-10-06 15:18:57.749 INFO  [restartedMain] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-10-06 15:18:58.329 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-10-06 15:18:58.336 INFO  [restartedMain] p.c.m.Ms1LvcCatalogoApplication - Started Ms1LvcCatalogoApplication in 10.936 seconds (process running for 12.584)
+2026-10-06 15:21:03.920 INFO  [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-06 15:21:03.921 INFO  [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-10-06 15:21:03.923 INFO  [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-10-06 15:21:04.074 INFO  [http-nio-8081-exec-2] p.c.m.Controller.ProductoController - POST /productos
+2026-10-06 15:21:04.114 DEBUG [http-nio-8081-exec-2] p.c.m.Service.base.BaseServiceImpl - Creando Producto
+2026-10-06 15:21:04.163 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL - 
+    insert 
+    into
+        producto
+        (activo, categoria, estado_conservacion, fecha_actualizacion, fecha_creacion, id_vendedor, nombre, precio_referencia, rareza, stock, url_imagen, version) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2026-10-06 15:21:04.494 INFO  [http-nio-8081-exec-3] p.c.m.Controller.ProductoController - GET /productos/7
+2026-10-06 15:21:04.495 DEBUG [http-nio-8081-exec-3] p.c.m.Service.base.BaseServiceImpl - Obteniendo Producto 7
+2026-10-06 15:21:04.512 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.categoria,
+        p1_0.estado_conservacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.id_vendedor,
+        p1_0.nombre,
+        p1_0.precio_referencia,
+        p1_0.rareza,
+        p1_0.stock,
+        p1_0.url_imagen,
+        p1_0.version 
+    from
+        producto p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:04.681 INFO  [http-nio-8081-exec-4] p.c.m.Controller.ProductoController - GET /productos filtro=ProductoFiltro(nombre=char, categoria=Cartas, rareza=null, idVendedor=null)
+2026-10-06 15:21:04.682 DEBUG [http-nio-8081-exec-4] p.c.m.Service.base.BaseServiceImpl - Buscando Producto filtro=ProductoFiltro(nombre=char, categoria=Cartas, rareza=null, idVendedor=null)
+2026-10-06 15:21:04.752 DEBUG [http-nio-8081-exec-4] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.categoria,
+        p1_0.estado_conservacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.id_vendedor,
+        p1_0.nombre,
+        p1_0.precio_referencia,
+        p1_0.rareza,
+        p1_0.stock,
+        p1_0.url_imagen,
+        p1_0.version 
+    from
+        producto p1_0 
+    where
+        p1_0.activo=true 
+        and (
+            ? is null 
+            or p1_0.id_vendedor=?
+        ) 
+        and (
+            ? is null 
+            or p1_0.categoria=?
+        ) 
+        and (
+            ? is null 
+            or p1_0.rareza=?
+        ) 
+        and (
+            ? is null 
+            or lower(p1_0.nombre) like lower(('%'||cast(? as varchar)||'%')) escape ''
+        ) 
+    fetch
+        first ? rows only
+2026-10-06 15:21:04.932 INFO  [http-nio-8081-exec-6] p.c.m.Controller.ProductoController - PUT /productos/7
+2026-10-06 15:21:04.934 DEBUG [http-nio-8081-exec-6] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.categoria,
+        p1_0.estado_conservacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.id_vendedor,
+        p1_0.nombre,
+        p1_0.precio_referencia,
+        p1_0.rareza,
+        p1_0.stock,
+        p1_0.url_imagen,
+        p1_0.version 
+    from
+        producto p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:04.985 DEBUG [http-nio-8081-exec-6] p.c.m.Service.base.BaseServiceImpl - Actualizando Producto 7
+2026-10-06 15:21:04.994 DEBUG [http-nio-8081-exec-6] org.hibernate.SQL - 
+    update
+        producto 
+    set
+        activo=?,
+        categoria=?,
+        estado_conservacion=?,
+        fecha_actualizacion=?,
+        id_vendedor=?,
+        nombre=?,
+        precio_referencia=?,
+        rareza=?,
+        stock=?,
+        url_imagen=?,
+        version=? 
+    where
+        id=?
+2026-10-06 15:21:05.151 INFO  [http-nio-8081-exec-9] p.c.m.Controller.ProductoController - POST /productos
+2026-10-06 15:21:05.155 ERROR [http-nio-8081-exec-9] p.c.m.e.GlobalExceptionHandler - Error no controlado en /productos
+java.lang.IllegalArgumentException: nombre: es obligatorio
+	at py.com.ms1lvccatalogo.Service.producto.ProductoServiceImpl.crear(ProductoServiceImpl.java:36)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at py.com.ms1lvccatalogo.Service.producto.ProductoServiceImpl$$SpringCGLIB$$0.crear(<generated>)
+	at py.com.ms1lvccatalogo.Controller.ProductoController.crear(ProductoController.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$2(FilterChainProxy.java:235)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:376)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-10-06 15:21:05.171 WARN  [http-nio-8081-exec-9] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: nombre: es obligatorio]
+2026-10-06 15:21:05.263 INFO  [http-nio-8081-exec-8] p.c.m.C.PublicacionController - POST /publicaciones
+2026-10-06 15:21:05.264 DEBUG [http-nio-8081-exec-8] p.c.m.Service.base.BaseServiceImpl - Creando Publicacion
+2026-10-06 15:21:05.265 DEBUG [http-nio-8081-exec-8] org.hibernate.SQL - 
+    insert 
+    into
+        publicacion
+        (descripcion, estado_publicacion, fecha_actualizacion, fecha_creacion, fecha_publicacion, id_vendedor, tipo_venta, titulo) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-10-06 15:21:05.403 INFO  [http-nio-8081-exec-5] p.c.m.C.PublicacionController - GET /publicaciones/3
+2026-10-06 15:21:05.404 DEBUG [http-nio-8081-exec-5] p.c.m.Service.base.BaseServiceImpl - Obteniendo Publicacion 3
+2026-10-06 15:21:05.405 DEBUG [http-nio-8081-exec-5] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.descripcion,
+        p1_0.estado_publicacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.fecha_publicacion,
+        p1_0.id_vendedor,
+        p1_0.tipo_venta,
+        p1_0.titulo 
+    from
+        publicacion p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:05.563 INFO  [http-nio-8081-exec-10] p.c.m.C.PublicacionController - GET /publicaciones filtro=PublicacionFiltro(titulo=null, idVendedor=1, estadoPublicacion=ACTIVA, tipoVenta=null)
+2026-10-06 15:21:05.564 DEBUG [http-nio-8081-exec-10] p.c.m.Service.base.BaseServiceImpl - Buscando Publicacion filtro=PublicacionFiltro(titulo=null, idVendedor=1, estadoPublicacion=ACTIVA, tipoVenta=null)
+2026-10-06 15:21:05.567 DEBUG [http-nio-8081-exec-10] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.descripcion,
+        p1_0.estado_publicacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.fecha_publicacion,
+        p1_0.id_vendedor,
+        p1_0.tipo_venta,
+        p1_0.titulo 
+    from
+        publicacion p1_0 
+    where
+        p1_0.estado_publicacion<>'CANCELADA' 
+        and (
+            ? is null 
+            or p1_0.id_vendedor=?
+        ) 
+        and (
+            ? is null 
+            or p1_0.estado_publicacion=?
+        ) 
+        and (
+            ? is null 
+            or p1_0.tipo_venta=?
+        ) 
+        and (
+            ? is null 
+            or lower(p1_0.titulo) like lower(('%'||cast(? as varchar)||'%')) escape ''
+        ) 
+    fetch
+        first ? rows only
+2026-10-06 15:21:05.711 INFO  [http-nio-8081-exec-1] p.c.m.C.PublicacionController - PUT /publicaciones/3
+2026-10-06 15:21:05.712 DEBUG [http-nio-8081-exec-1] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.descripcion,
+        p1_0.estado_publicacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.fecha_publicacion,
+        p1_0.id_vendedor,
+        p1_0.tipo_venta,
+        p1_0.titulo 
+    from
+        publicacion p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:05.744 DEBUG [http-nio-8081-exec-1] p.c.m.Service.base.BaseServiceImpl - Actualizando Publicacion 3
+2026-10-06 15:21:05.746 DEBUG [http-nio-8081-exec-1] org.hibernate.SQL - 
+    update
+        publicacion 
+    set
+        descripcion=?,
+        estado_publicacion=?,
+        fecha_actualizacion=?,
+        fecha_publicacion=?,
+        id_vendedor=?,
+        tipo_venta=?,
+        titulo=? 
+    where
+        id=?
+2026-10-06 15:21:05.897 INFO  [http-nio-8081-exec-2] p.c.m.C.DetallePublicacionController - POST /publicaciones/3/detalles
+2026-10-06 15:21:05.898 DEBUG [http-nio-8081-exec-2] p.c.m.S.d.DetallePublicacionServiceImpl - Agregando producto 7 a publicacion 3
+2026-10-06 15:21:05.898 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.descripcion,
+        p1_0.estado_publicacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.fecha_publicacion,
+        p1_0.id_vendedor,
+        p1_0.tipo_venta,
+        p1_0.titulo 
+    from
+        publicacion p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:05.932 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.categoria,
+        p1_0.estado_conservacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.id_vendedor,
+        p1_0.nombre,
+        p1_0.precio_referencia,
+        p1_0.rareza,
+        p1_0.stock,
+        p1_0.url_imagen,
+        p1_0.version 
+    from
+        producto p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:05.995 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL - 
+    select
+        dp1_0.id 
+    from
+        detalle_publicacion dp1_0 
+    where
+        dp1_0.id_publicacion=? 
+        and dp1_0.id_producto=? 
+    fetch
+        first ? rows only
+2026-10-06 15:21:06.030 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL - 
+    insert 
+    into
+        detalle_publicacion
+        (cantidad_publicada, precio_unitario, id_producto, id_publicacion) 
+    values
+        (?, ?, ?, ?)
+2026-10-06 15:21:06.146 INFO  [http-nio-8081-exec-3] p.c.m.C.DetallePublicacionController - POST /publicaciones/3/detalles
+2026-10-06 15:21:06.147 DEBUG [http-nio-8081-exec-3] p.c.m.S.d.DetallePublicacionServiceImpl - Agregando producto 7 a publicacion 3
+2026-10-06 15:21:06.147 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.descripcion,
+        p1_0.estado_publicacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.fecha_publicacion,
+        p1_0.id_vendedor,
+        p1_0.tipo_venta,
+        p1_0.titulo 
+    from
+        publicacion p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:06.179 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.categoria,
+        p1_0.estado_conservacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.id_vendedor,
+        p1_0.nombre,
+        p1_0.precio_referencia,
+        p1_0.rareza,
+        p1_0.stock,
+        p1_0.url_imagen,
+        p1_0.version 
+    from
+        producto p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:06.213 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL - 
+    select
+        dp1_0.id 
+    from
+        detalle_publicacion dp1_0 
+    where
+        dp1_0.id_publicacion=? 
+        and dp1_0.id_producto=? 
+    fetch
+        first ? rows only
+2026-10-06 15:21:06.287 WARN  [http-nio-8081-exec-3] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [py.com.ms1lvccatalogo.exception.ConflictException: El producto ya esta en la publicacion]
+2026-10-06 15:21:06.380 INFO  [http-nio-8081-exec-4] p.c.m.C.DetallePublicacionController - GET /publicaciones/3/detalles
+2026-10-06 15:21:06.381 DEBUG [http-nio-8081-exec-4] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.descripcion,
+        p1_0.estado_publicacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.fecha_publicacion,
+        p1_0.id_vendedor,
+        p1_0.tipo_venta,
+        p1_0.titulo 
+    from
+        publicacion p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:06.419 DEBUG [http-nio-8081-exec-4] org.hibernate.SQL - 
+    select
+        dp1_0.id,
+        dp1_0.cantidad_publicada,
+        dp1_0.precio_unitario,
+        dp1_0.id_producto,
+        dp1_0.id_publicacion 
+    from
+        detalle_publicacion dp1_0 
+    where
+        dp1_0.id_publicacion=? 
+    fetch
+        first ? rows only
+2026-10-06 15:21:06.459 DEBUG [http-nio-8081-exec-4] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.categoria,
+        p1_0.estado_conservacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.id_vendedor,
+        p1_0.nombre,
+        p1_0.precio_referencia,
+        p1_0.rareza,
+        p1_0.stock,
+        p1_0.url_imagen,
+        p1_0.version 
+    from
+        producto p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:06.613 INFO  [http-nio-8081-exec-6] p.c.m.C.DetallePublicacionController - PUT /publicaciones/3/detalles/2
+2026-10-06 15:21:06.614 DEBUG [http-nio-8081-exec-6] p.c.m.S.d.DetallePublicacionServiceImpl - Actualizando detalle 2 de publicacion 3
+2026-10-06 15:21:06.615 DEBUG [http-nio-8081-exec-6] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.descripcion,
+        p1_0.estado_publicacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.fecha_publicacion,
+        p1_0.id_vendedor,
+        p1_0.tipo_venta,
+        p1_0.titulo 
+    from
+        publicacion p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:06.653 DEBUG [http-nio-8081-exec-6] org.hibernate.SQL - 
+    select
+        dp1_0.id,
+        dp1_0.cantidad_publicada,
+        dp1_0.precio_unitario,
+        dp1_0.id_producto,
+        dp1_0.id_publicacion 
+    from
+        detalle_publicacion dp1_0 
+    where
+        dp1_0.id=? 
+        and dp1_0.id_publicacion=?
+2026-10-06 15:21:06.685 DEBUG [http-nio-8081-exec-6] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.categoria,
+        p1_0.estado_conservacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.id_vendedor,
+        p1_0.nombre,
+        p1_0.precio_referencia,
+        p1_0.rareza,
+        p1_0.stock,
+        p1_0.url_imagen,
+        p1_0.version 
+    from
+        producto p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:06.718 DEBUG [http-nio-8081-exec-6] org.hibernate.SQL - 
+    update
+        detalle_publicacion 
+    set
+        cantidad_publicada=?,
+        precio_unitario=?,
+        id_producto=?,
+        id_publicacion=? 
+    where
+        id=?
+2026-10-06 15:21:06.861 INFO  [http-nio-8081-exec-9] p.c.m.C.DetallePublicacionController - PUT /publicaciones/3/detalles/2
+2026-10-06 15:21:06.865 DEBUG [http-nio-8081-exec-9] p.c.m.S.d.DetallePublicacionServiceImpl - Actualizando detalle 2 de publicacion 3
+2026-10-06 15:21:06.865 DEBUG [http-nio-8081-exec-9] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.descripcion,
+        p1_0.estado_publicacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.fecha_publicacion,
+        p1_0.id_vendedor,
+        p1_0.tipo_venta,
+        p1_0.titulo 
+    from
+        publicacion p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:06.910 DEBUG [http-nio-8081-exec-9] org.hibernate.SQL - 
+    select
+        dp1_0.id,
+        dp1_0.cantidad_publicada,
+        dp1_0.precio_unitario,
+        dp1_0.id_producto,
+        dp1_0.id_publicacion 
+    from
+        detalle_publicacion dp1_0 
+    where
+        dp1_0.id=? 
+        and dp1_0.id_publicacion=?
+2026-10-06 15:21:06.942 DEBUG [http-nio-8081-exec-9] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.categoria,
+        p1_0.estado_conservacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.id_vendedor,
+        p1_0.nombre,
+        p1_0.precio_referencia,
+        p1_0.rareza,
+        p1_0.stock,
+        p1_0.url_imagen,
+        p1_0.version 
+    from
+        producto p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:07.011 WARN  [http-nio-8081-exec-9] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [py.com.ms1lvccatalogo.exception.ConflictException: La cantidad supera el stock disponible]
+2026-10-06 15:21:07.098 INFO  [http-nio-8081-exec-7] p.c.m.C.PublicacionController - PATCH /publicaciones/3/estado
+2026-10-06 15:21:07.099 DEBUG [http-nio-8081-exec-7] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.descripcion,
+        p1_0.estado_publicacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.fecha_publicacion,
+        p1_0.id_vendedor,
+        p1_0.tipo_venta,
+        p1_0.titulo 
+    from
+        publicacion p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:07.132 DEBUG [http-nio-8081-exec-7] p.c.m.S.p.PublicacionServiceImpl - Publicacion 3: ACTIVA -> PAUSADA
+2026-10-06 15:21:07.133 DEBUG [http-nio-8081-exec-7] org.hibernate.SQL - 
+    update
+        publicacion 
+    set
+        descripcion=?,
+        estado_publicacion=?,
+        fecha_actualizacion=?,
+        fecha_publicacion=?,
+        id_vendedor=?,
+        tipo_venta=?,
+        titulo=? 
+    where
+        id=?
+2026-10-06 15:21:07.290 INFO  [http-nio-8081-exec-8] p.c.m.C.PublicacionController - DELETE /publicaciones/3
+2026-10-06 15:21:07.291 DEBUG [http-nio-8081-exec-8] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.descripcion,
+        p1_0.estado_publicacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.fecha_publicacion,
+        p1_0.id_vendedor,
+        p1_0.tipo_venta,
+        p1_0.titulo 
+    from
+        publicacion p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:07.322 DEBUG [http-nio-8081-exec-8] p.c.m.S.p.PublicacionServiceImpl - Cancelando publicacion 3
+2026-10-06 15:21:07.324 DEBUG [http-nio-8081-exec-8] org.hibernate.SQL - 
+    update
+        publicacion 
+    set
+        descripcion=?,
+        estado_publicacion=?,
+        fecha_actualizacion=?,
+        fecha_publicacion=?,
+        id_vendedor=?,
+        tipo_venta=?,
+        titulo=? 
+    where
+        id=?
+2026-10-06 15:21:07.476 INFO  [http-nio-8081-exec-5] p.c.m.C.PublicacionController - GET /publicaciones/3
+2026-10-06 15:21:07.476 DEBUG [http-nio-8081-exec-5] p.c.m.Service.base.BaseServiceImpl - Obteniendo Publicacion 3
+2026-10-06 15:21:07.477 DEBUG [http-nio-8081-exec-5] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.descripcion,
+        p1_0.estado_publicacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.fecha_publicacion,
+        p1_0.id_vendedor,
+        p1_0.tipo_venta,
+        p1_0.titulo 
+    from
+        publicacion p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:07.542 WARN  [http-nio-8081-exec-5] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [jakarta.persistence.EntityNotFoundException: Publicacion no encontrado: 3]
+2026-10-06 15:21:07.601 INFO  [http-nio-8081-exec-10] p.c.m.C.PublicacionController - PATCH /publicaciones/3/estado
+2026-10-06 15:21:07.602 DEBUG [http-nio-8081-exec-10] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.descripcion,
+        p1_0.estado_publicacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.fecha_publicacion,
+        p1_0.id_vendedor,
+        p1_0.tipo_venta,
+        p1_0.titulo 
+    from
+        publicacion p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:07.667 WARN  [http-nio-8081-exec-10] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [py.com.ms1lvccatalogo.exception.ConflictException: La publicacion 3 esta CANCELADA y no admite cambios de estado]
+2026-10-06 15:21:07.735 INFO  [http-nio-8081-exec-1] p.c.m.C.DetallePublicacionController - POST /publicaciones/3/detalles
+2026-10-06 15:21:07.735 DEBUG [http-nio-8081-exec-1] p.c.m.S.d.DetallePublicacionServiceImpl - Agregando producto 7 a publicacion 3
+2026-10-06 15:21:07.735 DEBUG [http-nio-8081-exec-1] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.descripcion,
+        p1_0.estado_publicacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.fecha_publicacion,
+        p1_0.id_vendedor,
+        p1_0.tipo_venta,
+        p1_0.titulo 
+    from
+        publicacion p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:07.803 WARN  [http-nio-8081-exec-1] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [jakarta.persistence.EntityNotFoundException: Publicacion no encontrado: 3]
+2026-10-06 15:21:07.890 INFO  [http-nio-8081-exec-2] p.c.m.Controller.ProductoController - DELETE /productos/7
+2026-10-06 15:21:07.891 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.categoria,
+        p1_0.estado_conservacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.id_vendedor,
+        p1_0.nombre,
+        p1_0.precio_referencia,
+        p1_0.rareza,
+        p1_0.stock,
+        p1_0.url_imagen,
+        p1_0.version 
+    from
+        producto p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:07.923 DEBUG [http-nio-8081-exec-2] p.c.m.S.producto.ProductoServiceImpl - Eliminando producto 7
+2026-10-06 15:21:07.924 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL - 
+    update
+        producto 
+    set
+        activo=?,
+        categoria=?,
+        estado_conservacion=?,
+        fecha_actualizacion=?,
+        id_vendedor=?,
+        nombre=?,
+        precio_referencia=?,
+        rareza=?,
+        stock=?,
+        url_imagen=?,
+        version=? 
+    where
+        id=?
+2026-10-06 15:21:08.076 INFO  [http-nio-8081-exec-3] p.c.m.Controller.ProductoController - GET /productos/7
+2026-10-06 15:21:08.076 DEBUG [http-nio-8081-exec-3] p.c.m.Service.base.BaseServiceImpl - Obteniendo Producto 7
+2026-10-06 15:21:08.077 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.categoria,
+        p1_0.estado_conservacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.id_vendedor,
+        p1_0.nombre,
+        p1_0.precio_referencia,
+        p1_0.rareza,
+        p1_0.stock,
+        p1_0.url_imagen,
+        p1_0.version 
+    from
+        producto p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:08.141 WARN  [http-nio-8081-exec-3] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [jakarta.persistence.EntityNotFoundException: Producto no encontrado: 7]
+2026-10-06 15:21:08.195 INFO  [http-nio-8081-exec-4] p.c.m.C.PublicacionController - POST /publicaciones
+2026-10-06 15:21:08.197 DEBUG [http-nio-8081-exec-4] p.c.m.Service.base.BaseServiceImpl - Creando Publicacion
+2026-10-06 15:21:08.198 DEBUG [http-nio-8081-exec-4] org.hibernate.SQL - 
+    insert 
+    into
+        publicacion
+        (descripcion, estado_publicacion, fecha_actualizacion, fecha_creacion, fecha_publicacion, id_vendedor, tipo_venta, titulo) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2026-10-06 15:21:08.360 INFO  [http-nio-8081-exec-6] p.c.m.Controller.OfertaController - POST /ofertas
+2026-10-06 15:21:08.370 DEBUG [http-nio-8081-exec-6] p.c.m.S.oferta.OfertaServiceImpl - Creando oferta de comprador 2 en publicacion 4
+2026-10-06 15:21:08.373 DEBUG [http-nio-8081-exec-6] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.descripcion,
+        p1_0.estado_publicacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.fecha_publicacion,
+        p1_0.id_vendedor,
+        p1_0.tipo_venta,
+        p1_0.titulo 
+    from
+        publicacion p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:08.408 DEBUG [http-nio-8081-exec-6] org.hibernate.SQL - 
+    insert 
+    into
+        oferta
+        (estado_oferta, fecha_oferta, fecha_respuesta, id_comprador, monto_ofertado, id_publicacion) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-10-06 15:21:08.585 INFO  [http-nio-8081-exec-9] p.c.m.Controller.OfertaController - POST /ofertas
+2026-10-06 15:21:08.585 DEBUG [http-nio-8081-exec-9] p.c.m.S.oferta.OfertaServiceImpl - Creando oferta de comprador 1 en publicacion 4
+2026-10-06 15:21:08.585 DEBUG [http-nio-8081-exec-9] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.descripcion,
+        p1_0.estado_publicacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.fecha_publicacion,
+        p1_0.id_vendedor,
+        p1_0.tipo_venta,
+        p1_0.titulo 
+    from
+        publicacion p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:08.648 WARN  [http-nio-8081-exec-9] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [py.com.ms1lvccatalogo.exception.ConflictException: El vendedor no puede ofertar en su propia publicacion]
+2026-10-06 15:21:08.725 INFO  [http-nio-8081-exec-7] p.c.m.Controller.OfertaController - POST /ofertas
+2026-10-06 15:21:08.725 DEBUG [http-nio-8081-exec-7] p.c.m.S.oferta.OfertaServiceImpl - Creando oferta de comprador 2 en publicacion 3
+2026-10-06 15:21:08.726 DEBUG [http-nio-8081-exec-7] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.descripcion,
+        p1_0.estado_publicacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.fecha_publicacion,
+        p1_0.id_vendedor,
+        p1_0.tipo_venta,
+        p1_0.titulo 
+    from
+        publicacion p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:08.790 WARN  [http-nio-8081-exec-7] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [jakarta.persistence.EntityNotFoundException: Publicacion no encontrado: 3]
+2026-10-06 15:21:08.882 INFO  [http-nio-8081-exec-8] p.c.m.Controller.OfertaController - GET /ofertas/1
+2026-10-06 15:21:08.882 DEBUG [http-nio-8081-exec-8] p.c.m.Service.base.BaseServiceImpl - Obteniendo Oferta 1
+2026-10-06 15:21:08.883 DEBUG [http-nio-8081-exec-8] org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.estado_oferta,
+        o1_0.fecha_oferta,
+        o1_0.fecha_respuesta,
+        o1_0.id_comprador,
+        o1_0.monto_ofertado,
+        o1_0.id_publicacion 
+    from
+        oferta o1_0 
+    where
+        o1_0.id=?
+2026-10-06 15:21:09.024 INFO  [http-nio-8081-exec-5] p.c.m.Controller.OfertaController - GET /ofertas/999999999
+2026-10-06 15:21:09.025 DEBUG [http-nio-8081-exec-5] p.c.m.Service.base.BaseServiceImpl - Obteniendo Oferta 999999999
+2026-10-06 15:21:09.025 DEBUG [http-nio-8081-exec-5] org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.estado_oferta,
+        o1_0.fecha_oferta,
+        o1_0.fecha_respuesta,
+        o1_0.id_comprador,
+        o1_0.monto_ofertado,
+        o1_0.id_publicacion 
+    from
+        oferta o1_0 
+    where
+        o1_0.id=?
+2026-10-06 15:21:09.094 WARN  [http-nio-8081-exec-5] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [jakarta.persistence.EntityNotFoundException: Oferta no encontrado: 999999999]
+2026-10-06 15:21:09.175 INFO  [http-nio-8081-exec-10] p.c.m.Controller.OfertaController - GET /ofertas filtro=OfertaFiltro(idPublicacion=4, idComprador=null, estadoOferta=PENDIENTE)
+2026-10-06 15:21:09.175 DEBUG [http-nio-8081-exec-10] p.c.m.Service.base.BaseServiceImpl - Buscando Oferta filtro=OfertaFiltro(idPublicacion=4, idComprador=null, estadoOferta=PENDIENTE)
+2026-10-06 15:21:09.177 DEBUG [http-nio-8081-exec-10] org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.estado_oferta,
+        o1_0.fecha_oferta,
+        o1_0.fecha_respuesta,
+        o1_0.id_comprador,
+        o1_0.monto_ofertado,
+        o1_0.id_publicacion 
+    from
+        oferta o1_0 
+    where
+        (
+            ? is null 
+            or o1_0.id_publicacion=?
+        ) 
+        and (
+            ? is null 
+            or o1_0.id_comprador=?
+        ) 
+        and (
+            ? is null 
+            or o1_0.estado_oferta=?
+        ) 
+    fetch
+        first ? rows only
+2026-10-06 15:21:09.319 INFO  [http-nio-8081-exec-1] p.c.m.Controller.OfertaController - PUT /ofertas/1
+2026-10-06 15:21:09.319 DEBUG [http-nio-8081-exec-1] org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.estado_oferta,
+        o1_0.fecha_oferta,
+        o1_0.fecha_respuesta,
+        o1_0.id_comprador,
+        o1_0.monto_ofertado,
+        o1_0.id_publicacion 
+    from
+        oferta o1_0 
+    where
+        o1_0.id=?
+2026-10-06 15:21:09.353 DEBUG [http-nio-8081-exec-1] p.c.m.S.oferta.OfertaServiceImpl - Actualizando monto de oferta 1
+2026-10-06 15:21:09.353 DEBUG [http-nio-8081-exec-1] org.hibernate.SQL - 
+    update
+        oferta 
+    set
+        estado_oferta=?,
+        fecha_oferta=?,
+        fecha_respuesta=?,
+        id_comprador=?,
+        monto_ofertado=?,
+        id_publicacion=? 
+    where
+        id=?
+2026-10-06 15:21:09.505 INFO  [http-nio-8081-exec-2] p.c.m.Controller.OfertaController - POST /ofertas/1/aceptar
+2026-10-06 15:21:09.506 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.estado_oferta,
+        o1_0.fecha_oferta,
+        o1_0.fecha_respuesta,
+        o1_0.id_comprador,
+        o1_0.monto_ofertado,
+        o1_0.id_publicacion 
+    from
+        oferta o1_0 
+    where
+        o1_0.id=?
+2026-10-06 15:21:09.540 DEBUG [http-nio-8081-exec-2] p.c.m.S.oferta.OfertaServiceImpl - Oferta 1: PENDIENTE -> ACEPTADA
+2026-10-06 15:21:09.541 DEBUG [http-nio-8081-exec-2] org.hibernate.SQL - 
+    update
+        oferta 
+    set
+        estado_oferta=?,
+        fecha_oferta=?,
+        fecha_respuesta=?,
+        id_comprador=?,
+        monto_ofertado=?,
+        id_publicacion=? 
+    where
+        id=?
+2026-10-06 15:21:09.693 INFO  [http-nio-8081-exec-3] p.c.m.Controller.OfertaController - POST /ofertas/1/aceptar
+2026-10-06 15:21:09.694 DEBUG [http-nio-8081-exec-3] org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.estado_oferta,
+        o1_0.fecha_oferta,
+        o1_0.fecha_respuesta,
+        o1_0.id_comprador,
+        o1_0.monto_ofertado,
+        o1_0.id_publicacion 
+    from
+        oferta o1_0 
+    where
+        o1_0.id=?
+2026-10-06 15:21:09.758 WARN  [http-nio-8081-exec-3] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [py.com.ms1lvccatalogo.exception.ConflictException: La oferta no esta PENDIENTE (estado actual: ACEPTADA)]
+2026-10-06 15:21:09.840 INFO  [http-nio-8081-exec-4] p.c.m.Controller.OfertaController - PUT /ofertas/1
+2026-10-06 15:21:09.841 DEBUG [http-nio-8081-exec-4] org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.estado_oferta,
+        o1_0.fecha_oferta,
+        o1_0.fecha_respuesta,
+        o1_0.id_comprador,
+        o1_0.monto_ofertado,
+        o1_0.id_publicacion 
+    from
+        oferta o1_0 
+    where
+        o1_0.id=?
+2026-10-06 15:21:09.903 WARN  [http-nio-8081-exec-4] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [py.com.ms1lvccatalogo.exception.ConflictException: La oferta no esta PENDIENTE (estado actual: ACEPTADA)]
+2026-10-06 15:21:09.980 INFO  [http-nio-8081-exec-6] p.c.m.Controller.OfertaController - POST /ofertas
+2026-10-06 15:21:09.981 DEBUG [http-nio-8081-exec-6] p.c.m.S.oferta.OfertaServiceImpl - Creando oferta de comprador 2 en publicacion 4
+2026-10-06 15:21:09.981 DEBUG [http-nio-8081-exec-6] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.descripcion,
+        p1_0.estado_publicacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.fecha_publicacion,
+        p1_0.id_vendedor,
+        p1_0.tipo_venta,
+        p1_0.titulo 
+    from
+        publicacion p1_0 
+    where
+        p1_0.id=?
+2026-10-06 15:21:10.013 DEBUG [http-nio-8081-exec-6] org.hibernate.SQL - 
+    insert 
+    into
+        oferta
+        (estado_oferta, fecha_oferta, fecha_respuesta, id_comprador, monto_ofertado, id_publicacion) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2026-10-06 15:21:10.152 INFO  [http-nio-8081-exec-9] p.c.m.Controller.OfertaController - POST /ofertas/2/rechazar
+2026-10-06 15:21:10.153 DEBUG [http-nio-8081-exec-9] org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.estado_oferta,
+        o1_0.fecha_oferta,
+        o1_0.fecha_respuesta,
+        o1_0.id_comprador,
+        o1_0.monto_ofertado,
+        o1_0.id_publicacion 
+    from
+        oferta o1_0 
+    where
+        o1_0.id=?
+2026-10-06 15:21:10.189 DEBUG [http-nio-8081-exec-9] p.c.m.S.oferta.OfertaServiceImpl - Oferta 2: PENDIENTE -> RECHAZADA
+2026-10-06 15:21:10.190 DEBUG [http-nio-8081-exec-9] org.hibernate.SQL - 
+    update
+        oferta 
+    set
+        estado_oferta=?,
+        fecha_oferta=?,
+        fecha_respuesta=?,
+        id_comprador=?,
+        monto_ofertado=?,
+        id_publicacion=? 
+    where
+        id=?
+2026-10-06 15:21:10.336 INFO  [http-nio-8081-exec-7] p.c.m.Controller.OfertaController - POST /ofertas/2/rechazar
+2026-10-06 15:21:10.337 DEBUG [http-nio-8081-exec-7] org.hibernate.SQL - 
+    select
+        o1_0.id,
+        o1_0.estado_oferta,
+        o1_0.fecha_oferta,
+        o1_0.fecha_respuesta,
+        o1_0.id_comprador,
+        o1_0.monto_ofertado,
+        o1_0.id_publicacion 
+    from
+        oferta o1_0 
+    where
+        o1_0.id=?
+2026-10-06 15:21:10.399 WARN  [http-nio-8081-exec-7] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [py.com.ms1lvccatalogo.exception.ConflictException: La oferta no esta PENDIENTE (estado actual: RECHAZADA)]
+2026-10-06 15:41:04.554 INFO  [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-06 15:41:04.570 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-06 15:41:04.573 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 15:41:04.577 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-06 15:41:04.717 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

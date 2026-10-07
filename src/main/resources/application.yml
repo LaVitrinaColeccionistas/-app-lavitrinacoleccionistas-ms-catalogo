@@ -1,9 +1,12 @@
 server:
-  port: ${SERVER_PORT:8081}
+  port: ${SERVER_PORT:8082}
+  servlet:
+    context-path: /api
+  forward-headers-strategy: framework
 
 spring:
   application:
-    name: ${APP_NAME:ms1-lvc-catalogo}
+    name: ${APP_NAME:app-lavitrinacoleccionistas-ms-catalogo}
   config:
     import: optional:file:.env[.properties]
   datasource:
@@ -19,7 +22,7 @@ spring:
     enabled: ${LIQUIBASE_ENABLED:true}
   jpa:
     open-in-view: false
-    show-sql: false              # se loguea vía logger, no por stdout
+    show-sql: false
     hibernate:
       ddl-auto: none
     properties:
@@ -31,6 +34,13 @@ spring:
         default-page-size: ${PAGE_SIZE_DEFAULT:20}
         max-page-size: ${PAGE_SIZE_MAX:100}
         one-indexed-parameters: false
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
+  instance:
+    prefer-ip-address: true
 
 springdoc:
   api-docs:
