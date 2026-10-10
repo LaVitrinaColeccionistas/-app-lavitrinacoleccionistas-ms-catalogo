@@ -9,7 +9,7 @@ import py.com.lavitrinacoleccionistas.dto.PublicacionUpdateDTO;
 import py.com.lavitrinacoleccionistas.entity.Publicacion;
 import py.com.ms1lvccatalogo.Config.IBaseMapperConfig;
 
-@Mapper(config = IBaseMapperConfig.class)
+@Mapper(config = IBaseMapperConfig.class, uses = DetallePublicacionMapper.class)
 public interface PublicacionMapper
         extends IBaseMapper<Publicacion, PublicacionCreateDTO, PublicacionUpdateDTO, PublicacionDTO> {
 
@@ -24,8 +24,9 @@ public interface PublicacionMapper
     Publicacion toEntity(PublicacionCreateDTO dto);
 
     @Override
+    @Mapping(target = "detalles", source = "detallePublicacion")
     PublicacionDTO toDTO(Publicacion entity);
-
+    
     @Override
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "idVendedor", ignore = true)

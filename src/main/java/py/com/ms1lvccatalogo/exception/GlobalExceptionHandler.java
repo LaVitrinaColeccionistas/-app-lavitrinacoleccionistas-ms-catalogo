@@ -59,6 +59,10 @@ public class GlobalExceptionHandler {
         return build(HttpStatus.INTERNAL_SERVER_ERROR, "Error interno del servidor", req);
     }
 
+    @ExceptionHandler(BadRequestException.class)
+    public ResponseEntity<ApiError> handleBadRequest(BadRequestException ex, HttpServletRequest req) {
+        return build(HttpStatus.BAD_REQUEST, ex.getMessage(), req);
+    }
     private ResponseEntity<ApiError> build(HttpStatus status, String msg, HttpServletRequest req) {
         return ResponseEntity.status(status)
                 .body(new ApiError(LocalDateTime.now(), status.value(), status.getReasonPhrase(), msg, req.getRequestURI()));

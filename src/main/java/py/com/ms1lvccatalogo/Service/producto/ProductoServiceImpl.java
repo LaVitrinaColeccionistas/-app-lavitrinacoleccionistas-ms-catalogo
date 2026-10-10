@@ -13,8 +13,12 @@ import py.com.lavitrinacoleccionistas.dto.ProductoUpdateDTO;
 import py.com.lavitrinacoleccionistas.entity.Producto;
 import py.com.ms1lvccatalogo.Repository.IProductoRepository;
 import py.com.ms1lvccatalogo.Service.base.BaseServiceImpl;
+import py.com.ms1lvccatalogo.exception.BadRequestException;
 import py.com.ms1lvccatalogo.filtro.ProductoFiltro;
 import py.com.ms1lvccatalogo.mapper.ProductoMapper;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 @Service
@@ -32,8 +36,12 @@ public class ProductoServiceImpl
     @Override
     @Transactional
     public ProductoDTO crear(ProductoCreateDTO dto) {
-        if (dto.getNombre() == null || dto.getNombre().isBlank()) {
-            throw new IllegalArgumentException("nombre: es obligatorio");
+        List<String> faltantes = new ArrayList<>();
+        if (dto.getIdVendedor() == null) faltantes.add("idVendedor");
+        if (dto.getNombre() == null || dto.getNombre().isBlank()) faltantes.add("nombre");
+        if (dto.getPrecioReferencia() == null) faltantes.add("precioReferencia");
+        if (!faltantes.isEmpty()) {
+            throw new BadRequestException("Campos obligatorios: " + String.join(", ", faltantes));
         }
         return super.crear(dto);
     }
