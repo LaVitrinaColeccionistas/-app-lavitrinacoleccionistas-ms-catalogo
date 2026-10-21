@@ -15,8 +15,8 @@ spring:
     password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
     hikari:
-      maximum-pool-size: ${DB_POOL_MAX:10}
-      connection-timeout: ${DB_CONN_TIMEOUT:30000}
+      maximum-pool-size: ${DB_POOL_MAX:3}
+      minimum-idle: ${DB_POOL_MIN_IDLE:1}
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.yaml
     enabled: ${LIQUIBASE_ENABLED:true}
@@ -35,8 +35,28 @@ spring:
         max-page-size: ${PAGE_SIZE_MAX:100}
         one-indexed-parameters: false
 
+    redis:
+      host: ${REDIS_HOST}
+      port: ${REDIS_PORT}
+      username: ${REDIS_USERNAME:default}
+      password: ${REDIS_PASSWORD}
+      ssl:
+        enabled: ${REDIS_SSL:false}
+      timeout: 3000ms
+  cache:
+    type: redis
+
+app:
+  cache:
+    prefix: ${CACHE_PREFIX:lvc}
+    default-ttl: ${CACHE_DEFAULT_TTL:10m}
+    domains:
+      productos: ${CACHE_TTL_PRODUCTOS:1h}
+      publicaciones: ${CACHE_TTL_PUBLICACIONES:15m}
+
 eureka:
   client:
+    enabled: true
     service-url:
       defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
   instance:
@@ -67,3 +87,4 @@ logging:
     py.com.ms1lvccatalogo.Service: ${LOG_LEVEL_SERVICE:DEBUG}
     py.com.ms1lvccatalogo.Repository: ${LOG_LEVEL_REPOSITORY:DEBUG}
     org.hibernate.SQL: ${LOG_LEVEL_SQL:DEBUG}
+    py.com.ms1lvccatalogo.Config: ${LOG_LEVEL_CACHE:DEBUG}

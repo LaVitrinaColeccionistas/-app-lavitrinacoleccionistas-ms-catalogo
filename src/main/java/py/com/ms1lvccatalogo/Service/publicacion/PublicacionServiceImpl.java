@@ -2,6 +2,10 @@ package py.com.ms1lvccatalogo.Service.publicacion;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -37,17 +41,27 @@ public class PublicacionServiceImpl
     private final IPublicacionRepository publicacionRepository;
     private final IProductoService productoService;
     private final DetallePublicacionValidator validator;
+    private final CacheManager cacheManager;
 
     public PublicacionServiceImpl(IPublicacionRepository publicacionRepository, PublicacionMapper mapper,
-                                  IProductoService productoService, DetallePublicacionValidator validator) {
+                                  IProductoService productoService, DetallePublicacionValidator validator, CacheManager cacheManager) {
         super(publicacionRepository, mapper, "Publicacion");
         this.publicacionRepository = publicacionRepository;
         this.productoService = productoService;
         this.validator = validator;
+        this.cacheManager = cacheManager;
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    @Cacheable(cacheNames = "publicaciones", key = "#id")
+    public PublicacionDTO obtener(Long id) {
+        return super.obtener(id);
     }
 
     @Override
     @Transactional
+    @CachePut(cacheNames = "publicaciones", key = "#result.id")
     public PublicacionDTO crear(PublicacionCreateDTO dto) {
         if (dto.getDetalles() == null || dto.getDetalles().isEmpty()) {
             throw new BadRequestException("La publicacion necesita al menos un detalle");
@@ -60,6 +74,7 @@ public class PublicacionServiceImpl
 
     @Override
     @Transactional
+    @CachePut(cacheNames = "publicaciones", key = "#result.id")
     public PublicacionDTO actualizar(Long id, PublicacionUpdateDTO dto) {
         Publicacion p = buscarPorId(id);
         log.debug("Actualizando publicacion {}", id);
@@ -105,6 +120,7 @@ public class PublicacionServiceImpl
 
     @Override
     @Transactional
+    @CacheEvict(cacheNames = "publicaciones", key = "#result.id")
     public void eliminar(Long id) {
         Publicacion p = buscarPorId(id);
         log.debug("Cancelando publicacion {}", id);
@@ -114,6 +130,7 @@ public class PublicacionServiceImpl
 
     @Override
     @Transactional
+    @CachePut(cacheNames = "publicaciones", key = "#result.id")
     public PublicacionDTO actualizarEstado(Long id, PublicacionEstadoUpdateDTO dto) {
         Publicacion p = super.buscarPorId(id);
         if (p.getEstadoPublicacion() == EstadoPublicacion.CANCELADA) {

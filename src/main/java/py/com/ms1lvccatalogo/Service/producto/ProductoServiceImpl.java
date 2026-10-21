@@ -2,6 +2,10 @@ package py.com.ms1lvccatalogo.Service.producto;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -27,14 +31,24 @@ public class ProductoServiceImpl
         implements IProductoService {
 
     private final IProductoRepository productoRepository;
+    private final CacheManager cacheManager;
 
-    public ProductoServiceImpl(IProductoRepository productoRepository, ProductoMapper productoMapper) {
+    public ProductoServiceImpl(IProductoRepository productoRepository, ProductoMapper productoMapper, CacheManager cacheManager) {
         super(productoRepository, productoMapper, "Producto");
         this.productoRepository = productoRepository;
+        this.cacheManager = cacheManager;
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    @Cacheable(cacheNames = "productos", key = "#id")
+    public ProductoDTO obtener(Long id) {
+        return super.obtener(id);
     }
 
     @Override
     @Transactional
+    @CachePut(cacheNames = "productos", key = "#result.id")
     public ProductoDTO crear(ProductoCreateDTO dto) {
         List<String> faltantes = new ArrayList<>();
         if (dto.getIdVendedor() == null) faltantes.add("idVendedor");
@@ -44,6 +58,13 @@ public class ProductoServiceImpl
             throw new BadRequestException("Campos obligatorios: " + String.join(", ", faltantes));
         }
         return super.crear(dto);
+    }
+
+    @Override
+    @Transactional
+    @CachePut(cacheNames = "productos", key = "#result.id")
+    public ProductoDTO actualizar(Long id, ProductoUpdateDTO dto) {
+        return super.actualizar(id, dto);
     }
 
     @Override
@@ -57,6 +78,7 @@ public class ProductoServiceImpl
 
     @Override
     @Transactional
+    @CacheEvict(cacheNames = "productos", key = "#id")
     public void eliminar(Long id) {
         Producto p = buscarPorId(id);
         log.debug("Eliminando producto {}", id);
