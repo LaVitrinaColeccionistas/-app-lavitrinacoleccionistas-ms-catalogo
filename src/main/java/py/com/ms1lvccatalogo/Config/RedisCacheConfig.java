@@ -2,6 +2,7 @@ package py.com.ms1lvccatalogo.Config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,10 +15,10 @@ import org.springframework.data.redis.serializer.GenericJacksonJsonRedisSerializ
 import org.springframework.data.redis.serializer.RedisSerializationContext.SerializationPair;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 import tools.jackson.databind.jsontype.BasicPolymorphicTypeValidator;
-import tools.jackson.databind.jsontype.PolymorphicTypeValidator;
 
 import java.time.Duration;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Configuration
@@ -25,25 +26,27 @@ import java.util.Map;
 @EnableConfigurationProperties(RedisCacheConfig.CacheProperties.class)
 public class RedisCacheConfig {
 
+    public static final String PRODUCTOS = "productos";
+    public static final String PUBLICACIONES = "publicaciones";
+    public static final String OFERTAS = "ofertas";
+
     @ConfigurationProperties(prefix = "app.cache")
     public record CacheProperties(String prefix,
                                   Duration defaultTtl,
+                                  List<String> allowedPackages,
                                   Map<String, Duration> domains) {
     }
 
     @Bean
-    public RedisCacheManager cacheManager(RedisConnectionFactory redisConnectionFactory,
-                                          CacheProperties props) {
+    public CacheManager cacheManager(RedisConnectionFactory redisConnectionFactory,
+                                     CacheProperties props) {
 
-        PolymorphicTypeValidator ptv = BasicPolymorphicTypeValidator.builder()
-                .allowIfSubType("py.com")
-                .allowIfSubType("java.util")
-                .allowIfSubType("java.time")
-                .build();
+        BasicPolymorphicTypeValidator.Builder ptv = BasicPolymorphicTypeValidator.builder();
+        props.allowedPackages().forEach(ptv::allowIfSubType);
 
         GenericJacksonJsonRedisSerializer serializer =
                 GenericJacksonJsonRedisSerializer.builder()
-                        .enableDefaultTyping(ptv)
+                        .enableDefaultTyping(ptv.build())
                         .build();
 
         RedisCacheConfiguration base = RedisCacheConfiguration.defaultCacheConfig()
@@ -56,12 +59,15 @@ public class RedisCacheConfig {
         Map<String, RedisCacheConfiguration> configs = new HashMap<>();
         props.domains().forEach((domain, ttl) -> configs.put(domain, base.entryTtl(ttl)));
 
-        return RedisCacheManager.builder(
+        RedisCacheManager redis = RedisCacheManager.builder(
                         RedisCacheWriter.nonLockingRedisCacheWriter(
                                 redisConnectionFactory, BatchStrategies.scan(1000)))
                 .cacheDefaults(base)
                 .withInitialCacheConfigurations(configs)
                 .enableStatistics()
                 .build();
+        redis.afterPropertiesSet();
+
+        return new LoggingCacheManager(redis);
     }
 }

@@ -15,6 +15,7 @@ import py.com.lavitrinacoleccionistas.entity.DetallePublicacion;
 import py.com.lavitrinacoleccionistas.entity.Producto;
 import py.com.lavitrinacoleccionistas.entity.Publicacion;
 import py.com.lavitrinacoleccionistas.enums.EstadoPublicacion;
+import py.com.ms1lvccatalogo.Config.RedisCacheConfig;
 import py.com.ms1lvccatalogo.Repository.IPublicacionRepository;
 import py.com.ms1lvccatalogo.Service.base.BaseServiceImpl;
 import py.com.ms1lvccatalogo.Service.detallepublicacion.DetallePublicacionValidator;
@@ -54,14 +55,14 @@ public class PublicacionServiceImpl
 
     @Override
     @Transactional(readOnly = true)
-    @Cacheable(cacheNames = "publicaciones", key = "#id")
+    @Cacheable(cacheNames = RedisCacheConfig.PUBLICACIONES, key = "#id")
     public PublicacionDTO obtener(Long id) {
         return super.obtener(id);
     }
 
     @Override
     @Transactional
-    @CachePut(cacheNames = "publicaciones", key = "#result.id")
+    @CachePut(cacheNames = RedisCacheConfig.PUBLICACIONES, key = "#result.id")
     public PublicacionDTO crear(PublicacionCreateDTO dto) {
         if (dto.getDetalles() == null || dto.getDetalles().isEmpty()) {
             throw new BadRequestException("La publicacion necesita al menos un detalle");
@@ -74,7 +75,7 @@ public class PublicacionServiceImpl
 
     @Override
     @Transactional
-    @CachePut(cacheNames = "publicaciones", key = "#result.id")
+    @CachePut(cacheNames = RedisCacheConfig.PUBLICACIONES, key = "#result.id")
     public PublicacionDTO actualizar(Long id, PublicacionUpdateDTO dto) {
         Publicacion p = buscarPorId(id);
         log.debug("Actualizando publicacion {}", id);
@@ -120,7 +121,7 @@ public class PublicacionServiceImpl
 
     @Override
     @Transactional
-    @CacheEvict(cacheNames = "publicaciones", key = "#result.id")
+    @CacheEvict(cacheNames = RedisCacheConfig.PUBLICACIONES, key = "#id")
     public void eliminar(Long id) {
         Publicacion p = buscarPorId(id);
         log.debug("Cancelando publicacion {}", id);
@@ -130,7 +131,7 @@ public class PublicacionServiceImpl
 
     @Override
     @Transactional
-    @CachePut(cacheNames = "publicaciones", key = "#result.id")
+    @CachePut(cacheNames = RedisCacheConfig.PUBLICACIONES, key = "#result.id")
     public PublicacionDTO actualizarEstado(Long id, PublicacionEstadoUpdateDTO dto) {
         Publicacion p = super.buscarPorId(id);
         if (p.getEstadoPublicacion() == EstadoPublicacion.CANCELADA) {

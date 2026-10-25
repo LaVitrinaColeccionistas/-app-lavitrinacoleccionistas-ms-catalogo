@@ -17,6 +17,19 @@ import java.time.LocalDateTime;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
+
+    @ExceptionHandler(org.springframework.security.access.AccessDeniedException.class)
+    public ResponseEntity<ApiError> handleAccessDenied(
+            org.springframework.security.access.AccessDeniedException ex, HttpServletRequest req) {
+        return build(HttpStatus.FORBIDDEN, "No tienes permisos para este recurso", req);
+    }
+
+    @ExceptionHandler(org.springframework.security.core.AuthenticationException.class)
+    public ResponseEntity<ApiError> handleAuth(
+            org.springframework.security.core.AuthenticationException ex, HttpServletRequest req) {
+        return build(HttpStatus.UNAUTHORIZED, "Token inválido, expirado o ausente", req);
+    }
+
     @ExceptionHandler({ResourceNotFoundException.class, EntityNotFoundException.class})
     public ResponseEntity<ApiError> handleNotFound(RuntimeException ex, HttpServletRequest req) {
         return build(HttpStatus.NOT_FOUND, ex.getMessage(), req);

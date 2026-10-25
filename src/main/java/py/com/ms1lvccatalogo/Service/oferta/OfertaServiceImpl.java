@@ -1,6 +1,8 @@
 package py.com.ms1lvccatalogo.Service.oferta;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -13,6 +15,7 @@ import py.com.lavitrinacoleccionistas.entity.Oferta;
 import py.com.lavitrinacoleccionistas.entity.Publicacion;
 import py.com.lavitrinacoleccionistas.enums.EstadoOferta;
 import py.com.lavitrinacoleccionistas.enums.EstadoPublicacion;
+import py.com.ms1lvccatalogo.Config.RedisCacheConfig;
 import py.com.ms1lvccatalogo.Repository.IOfertaRepository;
 import py.com.ms1lvccatalogo.Service.base.BaseServiceImpl;
 import py.com.ms1lvccatalogo.Service.publicacion.IPublicacionService;
@@ -37,9 +40,16 @@ public class OfertaServiceImpl
         this.ofertaRepository = ofertaRepository;
         this.publicacionService = publicacionService;
     }
+    @Override
+    @Transactional(readOnly = true)
+    @Cacheable(cacheNames = RedisCacheConfig.OFERTAS, key = "#id")
+    public OfertaDTO obtener(Long id) {
+        return super.obtener(id);
+    }
 
     @Override
     @Transactional
+    @CachePut(cacheNames = RedisCacheConfig.OFERTAS, key = "#result.id")
     public OfertaDTO crear(OfertaCreateDTO dto) {
         log.debug("Creando oferta de comprador {} en publicacion {}", dto.getIdComprador(), dto.getIdPublicacion());
         Publicacion pub = publicacionService.obtenerEntidad(dto.getIdPublicacion());
@@ -58,6 +68,7 @@ public class OfertaServiceImpl
 
     @Override
     @Transactional
+    @CachePut(cacheNames = RedisCacheConfig.OFERTAS, key = "#result.id")
     public OfertaDTO actualizar(Long id, OfertaUpdateDTO dto) {
         Oferta oferta = buscarPorId(id);
         exigirPendiente(oferta);
@@ -68,12 +79,14 @@ public class OfertaServiceImpl
 
     @Override
     @Transactional
+    @CachePut(cacheNames = RedisCacheConfig.OFERTAS, key = "#result.id")
     public OfertaDTO aceptar(Long id) {
         return responder(id, EstadoOferta.ACEPTADA);
     }
 
     @Override
     @Transactional
+    @CachePut(cacheNames = RedisCacheConfig.OFERTAS, key = "#result.id")
     public OfertaDTO rechazar(Long id) {
         return responder(id, EstadoOferta.RECHAZADA);
     }

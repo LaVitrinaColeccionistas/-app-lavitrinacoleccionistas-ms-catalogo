@@ -42,7 +42,7 @@ spring:
       password: ${REDIS_PASSWORD}
       ssl:
         enabled: ${REDIS_SSL:false}
-      timeout: 3000ms
+      timeout: ${REDIS_TIMEOUT:3s}
   cache:
     type: redis
 
@@ -50,9 +50,19 @@ app:
   cache:
     prefix: ${CACHE_PREFIX:lvc}
     default-ttl: ${CACHE_DEFAULT_TTL:10m}
+    allowed-packages:
+      - py.com
+      - java.util
+      - java.time
     domains:
       productos: ${CACHE_TTL_PRODUCTOS:1h}
       publicaciones: ${CACHE_TTL_PUBLICACIONES:15m}
+      ofertas: ${CACHE_TTL_OFERTAS:5m}
+  security:
+    jwt:
+      secret: ${JWT_SECRET}
+      expiration: 30m
+      issuer: lvc-auth
 
 eureka:
   client:

@@ -2,6 +2,7 @@ package py.com.ms1lvccatalogo.Service.producto;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
@@ -15,6 +16,7 @@ import py.com.lavitrinacoleccionistas.dto.ProductoDTO;
 import py.com.lavitrinacoleccionistas.dto.ProductoPageDTO;
 import py.com.lavitrinacoleccionistas.dto.ProductoUpdateDTO;
 import py.com.lavitrinacoleccionistas.entity.Producto;
+import py.com.ms1lvccatalogo.Config.RedisCacheConfig;
 import py.com.ms1lvccatalogo.Repository.IProductoRepository;
 import py.com.ms1lvccatalogo.Service.base.BaseServiceImpl;
 import py.com.ms1lvccatalogo.exception.BadRequestException;
@@ -41,14 +43,14 @@ public class ProductoServiceImpl
 
     @Override
     @Transactional(readOnly = true)
-    @Cacheable(cacheNames = "productos", key = "#id")
+    @Cacheable(cacheNames = RedisCacheConfig.PRODUCTOS, key = "#id")
     public ProductoDTO obtener(Long id) {
         return super.obtener(id);
     }
 
     @Override
     @Transactional
-    @CachePut(cacheNames = "productos", key = "#result.id")
+    @CachePut(cacheNames = RedisCacheConfig.PRODUCTOS, key = "#result.id")
     public ProductoDTO crear(ProductoCreateDTO dto) {
         List<String> faltantes = new ArrayList<>();
         if (dto.getIdVendedor() == null) faltantes.add("idVendedor");
@@ -62,9 +64,11 @@ public class ProductoServiceImpl
 
     @Override
     @Transactional
-    @CachePut(cacheNames = "productos", key = "#result.id")
+    @CachePut(cacheNames = RedisCacheConfig.PRODUCTOS, key = "#result.id")
     public ProductoDTO actualizar(Long id, ProductoUpdateDTO dto) {
-        return super.actualizar(id, dto);
+        ProductoDTO actualizado = super.actualizar(id, dto);
+        invalidarPublicaciones();
+        return actualizado;
     }
 
     @Override
@@ -78,12 +82,13 @@ public class ProductoServiceImpl
 
     @Override
     @Transactional
-    @CacheEvict(cacheNames = "productos", key = "#id")
+    @CacheEvict(cacheNames = RedisCacheConfig.PRODUCTOS, key = "#id")
     public void eliminar(Long id) {
         Producto p = buscarPorId(id);
         log.debug("Eliminando producto {}", id);
         p.setActivo(false);
         repository.save(p);
+        invalidarPublicaciones();
     }
 
     @Override
@@ -103,5 +108,13 @@ public class ProductoServiceImpl
         out.setSize(p.getSize());
         out.setNumber(p.getNumber());
         return out;
+    }
+
+    private void invalidarPublicaciones() {
+        Cache cache = cacheManager.getCache(RedisCacheConfig.PUBLICACIONES);
+        if (cache != null) {
+            cache.clear();
+            log.debug("CACHE CLEAR dominio=publicaciones por cambio en producto");
+        }
     }
 }

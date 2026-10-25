@@ -7,6 +7,7 @@ import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import py.com.lavitrinacoleccionistas.dto.ProductoCreateDTO;
 import py.com.lavitrinacoleccionistas.dto.ProductoDTO;
@@ -24,6 +25,7 @@ public class ProductoController {
     private final IProductoService service;
 
     @PostMapping
+    @PreAuthorize("hasAnyRole('ADMIN','VENDEDOR')")
     public ResponseEntity<ProductoDTO> crear(@Valid @RequestBody ProductoCreateDTO dto) {
         log.info("POST /productos");
         return ResponseEntity.status(HttpStatus.CREATED).body(service.crear(dto));
@@ -43,12 +45,14 @@ public class ProductoController {
     }
 
     @PutMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ADMIN','VENDEDOR')")
     public ProductoDTO actualizar(@PathVariable Long id, @Valid @RequestBody ProductoUpdateDTO dto) {
         log.info("PUT /productos/{}", id);
         return service.actualizar(id, dto);
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void eliminar(@PathVariable Long id) {
         log.info("DELETE /productos/{}", id);
