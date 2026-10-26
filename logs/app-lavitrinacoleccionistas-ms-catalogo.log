@@ -5914,3 +5914,622 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116) ~[spring-boot-4.1.1.jar:4.1.1]
 	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
 2026-10-25 17:35:21.543 INFO  [SpringApplicationShutdownHook] c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2026-10-25 21:17:05.345 INFO  [restartedMain] p.c.m.Ms1LvcCatalogoApplication - Starting Ms1LvcCatalogoApplication using Java 25.0.4.1 with PID 35964 (C:\Users\DELL\Desktop\LaVitrinaColeccionistas\app-lavitrinacoleccionitas-ms-catalogos\target\classes started by DELL in C:\Users\DELL\Desktop\LaVitrinaColeccionistas\app-lavitrinacoleccionitas-ms-catalogos)
+2026-10-25 21:17:05.349 INFO  [restartedMain] p.c.m.Ms1LvcCatalogoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-25 21:17:05.410 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-25 21:17:05.410 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-25 21:17:06.140 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-25 21:17:06.140 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-25 21:17:06.291 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 143 ms. Found 4 JPA repository interfaces.
+2026-10-25 21:17:06.660 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-25 21:17:06.662 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-10-25 21:17:06.692 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface py.com.ms1lvccatalogo.Repository.IBaseRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-25 21:17:06.696 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface py.com.ms1lvccatalogo.Repository.IOfertaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-25 21:17:06.696 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface py.com.ms1lvccatalogo.Repository.IProductoRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-25 21:17:06.697 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface py.com.ms1lvccatalogo.Repository.IPublicacionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-25 21:17:06.697 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2026-10-25 21:17:07.014 INFO  [restartedMain] o.s.cloud.context.scope.GenericScope - BeanFactory id=0ad199af-08b5-32e3-9a23-90f7c12468aa
+2026-10-25 21:17:07.640 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2026-10-25 21:17:07.657 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-25 21:17:07.658 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-25 21:17:07.731 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2321 ms
+2026-10-25 21:17:07.935 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-25 21:17:08.569 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5bef8019
+2026-10-25 21:17:08.572 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-25 21:17:08.921 INFO  [restartedMain] liquibase.database - Set default schema name to public
+2026-10-25 21:17:10.315 INFO  [restartedMain] liquibase.changelog - Reading from public.databasechangelog
+2026-10-25 21:17:10.812 INFO  [restartedMain] liquibase.ui - Database is up to date, no changesets to execute
+2026-10-25 21:17:10.847 INFO  [restartedMain] liquibase.changelog - Reading from public.databasechangelog
+2026-10-25 21:17:10.907 INFO  [restartedMain] liquibase.util - UPDATE SUMMARY
+2026-10-25 21:17:10.908 INFO  [restartedMain] liquibase.util - Run:                          0
+2026-10-25 21:17:10.908 INFO  [restartedMain] liquibase.util - Previously run:              19
+2026-10-25 21:17:10.908 INFO  [restartedMain] liquibase.util - Filtered out:                 0
+2026-10-25 21:17:10.908 INFO  [restartedMain] liquibase.util - -------------------------------
+2026-10-25 21:17:10.909 INFO  [restartedMain] liquibase.util - Total change sets:           19
+2026-10-25 21:17:10.910 INFO  [restartedMain] liquibase.util - Update summary generated
+2026-10-25 21:17:10.911 INFO  [restartedMain] liquibase.command - Command execution complete
+2026-10-25 21:17:11.050 INFO  [restartedMain] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-25 21:17:11.110 INFO  [restartedMain] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-25 21:17:11.533 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-25 21:17:11.800 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://aws-0-sa-east-1.pooler.supabase.com:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.6
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-25 21:17:12.941 INFO  [restartedMain] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-25 21:17:12.948 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-25 21:17:13.046 INFO  [restartedMain] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-25 21:17:15.806 INFO  [restartedMain] o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestClient.
+2026-10-25 21:17:15.848 WARN  [restartedMain] o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-10-25 21:17:15.950 INFO  [restartedMain] o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2026-10-25 21:17:15.981 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-10-25 21:17:15.985 INFO  [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-25 21:17:15.995 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-10-25 21:17:15.995 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-10-25 21:17:15.995 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-10-25 21:17:15.995 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-10-25 21:17:15.995 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-10-25 21:17:15.995 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-10-25 21:17:15.995 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-10-25 21:17:16.310 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-10-25 21:17:16.311 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-10-25 21:17:16.313 INFO  [restartedMain] c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-10-25 21:17:16.315 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1792973836314 with initial instances count: 1
+2026-10-25 21:17:16.321 INFO  [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry - Registering application APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO with eureka with status UP
+2026-10-25 21:17:16.322 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1792973836322, current=UP, previous=STARTING]
+2026-10-25 21:17:16.323 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO/app-lavitrinacoleccionistas-ms-catalogo:8082: registering service...
+2026-10-25 21:17:16.340 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/api'
+2026-10-25 21:17:16.341 INFO  [restartedMain] o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8082
+2026-10-25 21:17:16.358 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO/app-lavitrinacoleccionistas-ms-catalogo:8082 - registration status: 204
+2026-10-25 21:17:16.360 INFO  [restartedMain] p.c.m.Ms1LvcCatalogoApplication - Started Ms1LvcCatalogoApplication in 11.536 seconds (process running for 12.641)
+2026-10-25 21:19:22.232 INFO  [http-nio-8082-exec-1] o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-25 21:19:22.232 INFO  [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-10-25 21:19:22.234 INFO  [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-10-25 21:19:22.801 WARN  [http-nio-8082-exec-1] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:19:22.803 WARN  [http-nio-8082-exec-1] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:19:22.848 WARN  [http-nio-8082-exec-1] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:19:22.848 WARN  [http-nio-8082-exec-1] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:19:22.876 WARN  [http-nio-8082-exec-1] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:19:22.876 WARN  [http-nio-8082-exec-1] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:19:22.904 INFO  [http-nio-8082-exec-1] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 587 ms
+2026-10-25 21:20:36.954 WARN  [http-nio-8082-exec-5] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:20:36.955 WARN  [http-nio-8082-exec-5] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:20:36.970 WARN  [http-nio-8082-exec-5] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:20:36.970 WARN  [http-nio-8082-exec-5] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:20:36.985 WARN  [http-nio-8082-exec-5] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:20:36.985 WARN  [http-nio-8082-exec-5] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:20:37.002 INFO  [http-nio-8082-exec-5] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 219 ms
+2026-10-25 21:22:16.014 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-25 21:27:16.018 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-25 21:32:16.037 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-25 21:37:16.040 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-25 21:37:44.177 INFO  [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO with eureka with status DOWN
+2026-10-25 21:37:44.178 INFO  [SpringApplicationShutdownHook] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1792975064178, current=DOWN, previous=UP]
+2026-10-25 21:37:44.178 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO/app-lavitrinacoleccionistas-ms-catalogo:8082: registering service...
+2026-10-25 21:37:44.182 INFO  [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-25 21:37:44.185 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO/app-lavitrinacoleccionistas-ms-catalogo:8082 - registration status: 204
+2026-10-25 21:37:44.200 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-25 21:37:44.219 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-25 21:37:44.222 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-25 21:37:44.251 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-25 21:37:44.251 INFO  [SpringApplicationShutdownHook] c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2026-10-25 21:37:47.252 WARN  [DiscoveryClient-%d] c.n.discovery.TimedSupervisorTask - task supervisor shutting down, can't accept the task
+2026-10-25 21:37:47.252 INFO  [SpringApplicationShutdownHook] c.netflix.discovery.DiscoveryClient - Unregistering ...
+2026-10-25 21:37:47.256 INFO  [SpringApplicationShutdownHook] c.netflix.discovery.DiscoveryClient - DiscoveryClient_APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO/app-lavitrinacoleccionistas-ms-catalogo:8082 - deregister  status: 200
+2026-10-25 21:37:47.256 INFO  [SpringApplicationShutdownHook] c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2026-10-25 21:37:55.132 INFO  [restartedMain] p.c.m.Ms1LvcCatalogoApplication - Starting Ms1LvcCatalogoApplication using Java 25.0.4.1 with PID 38324 (C:\Users\DELL\Desktop\LaVitrinaColeccionistas\app-lavitrinacoleccionitas-ms-catalogos\target\classes started by DELL in C:\Users\DELL\Desktop\LaVitrinaColeccionistas\app-lavitrinacoleccionitas-ms-catalogos)
+2026-10-25 21:37:55.135 INFO  [restartedMain] p.c.m.Ms1LvcCatalogoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-25 21:37:55.204 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-25 21:37:55.204 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-25 21:37:56.601 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-25 21:37:56.601 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-25 21:37:56.795 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 176 ms. Found 4 JPA repository interfaces.
+2026-10-25 21:37:57.332 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-25 21:37:57.333 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-10-25 21:37:57.377 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface py.com.ms1lvccatalogo.Repository.IBaseRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-25 21:37:57.381 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface py.com.ms1lvccatalogo.Repository.IOfertaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-25 21:37:57.381 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface py.com.ms1lvccatalogo.Repository.IProductoRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-25 21:37:57.381 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface py.com.ms1lvccatalogo.Repository.IPublicacionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-25 21:37:57.381 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 0 Redis repository interfaces.
+2026-10-25 21:37:57.960 INFO  [restartedMain] o.s.cloud.context.scope.GenericScope - BeanFactory id=8b56c125-3292-34c2-ad78-74a8ae347970
+2026-10-25 21:37:58.959 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2026-10-25 21:37:58.981 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-25 21:37:58.981 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-25 21:37:59.085 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3880 ms
+2026-10-25 21:37:59.409 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-25 21:38:00.320 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@25469aec
+2026-10-25 21:38:00.321 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-25 21:38:00.825 INFO  [restartedMain] liquibase.database - Set default schema name to public
+2026-10-25 21:38:02.583 INFO  [restartedMain] liquibase.changelog - Reading from public.databasechangelog
+2026-10-25 21:38:03.155 INFO  [restartedMain] liquibase.ui - Database is up to date, no changesets to execute
+2026-10-25 21:38:03.193 INFO  [restartedMain] liquibase.changelog - Reading from public.databasechangelog
+2026-10-25 21:38:03.271 INFO  [restartedMain] liquibase.util - UPDATE SUMMARY
+2026-10-25 21:38:03.273 INFO  [restartedMain] liquibase.util - Run:                          0
+2026-10-25 21:38:03.273 INFO  [restartedMain] liquibase.util - Previously run:              19
+2026-10-25 21:38:03.274 INFO  [restartedMain] liquibase.util - Filtered out:                 0
+2026-10-25 21:38:03.274 INFO  [restartedMain] liquibase.util - -------------------------------
+2026-10-25 21:38:03.277 INFO  [restartedMain] liquibase.util - Total change sets:           19
+2026-10-25 21:38:03.278 INFO  [restartedMain] liquibase.util - Update summary generated
+2026-10-25 21:38:03.278 INFO  [restartedMain] liquibase.command - Command execution complete
+2026-10-25 21:38:03.535 INFO  [restartedMain] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-25 21:38:03.633 INFO  [restartedMain] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-25 21:38:04.377 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-25 21:38:04.682 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://aws-0-sa-east-1.pooler.supabase.com:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.6
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-25 21:38:06.570 INFO  [restartedMain] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-25 21:38:06.588 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-25 21:38:06.713 INFO  [restartedMain] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-25 21:38:11.149 INFO  [restartedMain] o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestClient.
+2026-10-25 21:38:11.212 WARN  [restartedMain] o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-10-25 21:38:11.365 INFO  [restartedMain] o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2026-10-25 21:38:11.410 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-10-25 21:38:11.412 INFO  [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-25 21:38:11.432 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-10-25 21:38:11.432 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-10-25 21:38:11.432 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-10-25 21:38:11.432 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-10-25 21:38:11.433 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-10-25 21:38:11.433 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-10-25 21:38:11.433 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-10-25 21:38:11.913 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-10-25 21:38:11.918 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-10-25 21:38:11.918 INFO  [restartedMain] c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-10-25 21:38:11.918 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1792975091918 with initial instances count: 3
+2026-10-25 21:38:11.918 INFO  [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry - Registering application APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO with eureka with status UP
+2026-10-25 21:38:11.918 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1792975091918, current=UP, previous=STARTING]
+2026-10-25 21:38:11.934 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO/app-lavitrinacoleccionistas-ms-catalogo:8082: registering service...
+2026-10-25 21:38:11.950 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/api'
+2026-10-25 21:38:11.950 INFO  [restartedMain] o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8082
+2026-10-25 21:38:11.981 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO/app-lavitrinacoleccionistas-ms-catalogo:8082 - registration status: 204
+2026-10-25 21:38:11.981 INFO  [restartedMain] p.c.m.Ms1LvcCatalogoApplication - Started Ms1LvcCatalogoApplication in 17.388 seconds (process running for 18.624)
+2026-10-25 21:38:39.111 INFO  [http-nio-8082-exec-1] o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-25 21:38:39.111 INFO  [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-10-25 21:38:39.111 INFO  [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-10-25 21:38:39.209 WARN  [http-nio-8082-exec-1] o.s.core.service.OpenAPIService - found more than one OpenAPIDefinition class. springdoc-openapi will be using the first one found.
+2026-10-25 21:38:39.609 WARN  [http-nio-8082-exec-1] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:38:39.609 WARN  [http-nio-8082-exec-1] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:38:39.657 WARN  [http-nio-8082-exec-1] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:38:39.657 WARN  [http-nio-8082-exec-1] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:38:39.676 WARN  [http-nio-8082-exec-1] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:38:39.676 WARN  [http-nio-8082-exec-1] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:38:39.709 INFO  [http-nio-8082-exec-1] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 500 ms
+2026-10-25 21:43:11.439 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-25 21:46:45.567 INFO  [http-nio-8082-exec-10] p.c.m.C.PublicacionController - GET /publicaciones filtro=PublicacionFiltro(titulo=null, idVendedor=null, estadoPublicacion=null, tipoVenta=null)
+2026-10-25 21:46:45.601 DEBUG [http-nio-8082-exec-10] p.c.m.Service.base.BaseServiceImpl - Buscando Publicacion filtro=PublicacionFiltro(titulo=null, idVendedor=null, estadoPublicacion=null, tipoVenta=null)
+2026-10-25 21:46:45.740 DEBUG [http-nio-8082-exec-10] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.descripcion,
+        p1_0.estado_publicacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.fecha_publicacion,
+        p1_0.id_vendedor,
+        p1_0.tipo_venta,
+        p1_0.titulo 
+    from
+        publicacion p1_0 
+    where
+        p1_0.estado_publicacion<>'CANCELADA' 
+        and (
+            ? is null 
+            or p1_0.id_vendedor=?
+        ) 
+        and (
+            ? is null 
+            or p1_0.estado_publicacion=?
+        ) 
+        and (
+            ? is null 
+            or p1_0.tipo_venta=?
+        ) 
+        and (
+            ? is null 
+            or lower(p1_0.titulo) like lower(('%'||cast(? as varchar)||'%')) escape ''
+        ) 
+    fetch
+        first ? rows only
+2026-10-25 21:46:45.839 DEBUG [http-nio-8082-exec-10] org.hibernate.SQL - 
+    select
+        dp1_0.id_publicacion,
+        dp1_0.id,
+        dp1_0.cantidad_publicada,
+        dp1_0.precio_unitario,
+        dp1_0.id_producto 
+    from
+        detalle_publicacion dp1_0 
+    where
+        dp1_0.id_publicacion=?
+2026-10-25 21:46:45.927 DEBUG [http-nio-8082-exec-10] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.categoria,
+        p1_0.estado_conservacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.id_vendedor,
+        p1_0.nombre,
+        p1_0.precio_referencia,
+        p1_0.rareza,
+        p1_0.stock,
+        p1_0.url_imagen,
+        p1_0.version 
+    from
+        producto p1_0 
+    where
+        p1_0.id=?
+2026-10-25 21:46:45.972 DEBUG [http-nio-8082-exec-10] org.hibernate.SQL - 
+    select
+        dp1_0.id_publicacion,
+        dp1_0.id,
+        dp1_0.cantidad_publicada,
+        dp1_0.precio_unitario,
+        dp1_0.id_producto 
+    from
+        detalle_publicacion dp1_0 
+    where
+        dp1_0.id_publicacion=?
+2026-10-25 21:46:46.006 DEBUG [http-nio-8082-exec-10] org.hibernate.SQL - 
+    select
+        dp1_0.id_publicacion,
+        dp1_0.id,
+        dp1_0.cantidad_publicada,
+        dp1_0.precio_unitario,
+        dp1_0.id_producto 
+    from
+        detalle_publicacion dp1_0 
+    where
+        dp1_0.id_publicacion=?
+2026-10-25 21:46:46.038 DEBUG [http-nio-8082-exec-10] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.categoria,
+        p1_0.estado_conservacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.id_vendedor,
+        p1_0.nombre,
+        p1_0.precio_referencia,
+        p1_0.rareza,
+        p1_0.stock,
+        p1_0.url_imagen,
+        p1_0.version 
+    from
+        producto p1_0 
+    where
+        p1_0.id=?
+2026-10-25 21:46:46.070 DEBUG [http-nio-8082-exec-10] org.hibernate.SQL - 
+    select
+        dp1_0.id_publicacion,
+        dp1_0.id,
+        dp1_0.cantidad_publicada,
+        dp1_0.precio_unitario,
+        dp1_0.id_producto 
+    from
+        detalle_publicacion dp1_0 
+    where
+        dp1_0.id_publicacion=?
+2026-10-25 21:46:46.101 DEBUG [http-nio-8082-exec-10] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.categoria,
+        p1_0.estado_conservacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.id_vendedor,
+        p1_0.nombre,
+        p1_0.precio_referencia,
+        p1_0.rareza,
+        p1_0.stock,
+        p1_0.url_imagen,
+        p1_0.version 
+    from
+        producto p1_0 
+    where
+        p1_0.id=?
+2026-10-25 21:46:46.137 DEBUG [http-nio-8082-exec-10] org.hibernate.SQL - 
+    select
+        dp1_0.id_publicacion,
+        dp1_0.id,
+        dp1_0.cantidad_publicada,
+        dp1_0.precio_unitario,
+        dp1_0.id_producto 
+    from
+        detalle_publicacion dp1_0 
+    where
+        dp1_0.id_publicacion=?
+2026-10-25 21:46:46.170 DEBUG [http-nio-8082-exec-10] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.categoria,
+        p1_0.estado_conservacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.id_vendedor,
+        p1_0.nombre,
+        p1_0.precio_referencia,
+        p1_0.rareza,
+        p1_0.stock,
+        p1_0.url_imagen,
+        p1_0.version 
+    from
+        producto p1_0 
+    where
+        p1_0.id=?
+2026-10-25 21:48:11.443 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-25 21:53:11.451 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-25 21:57:43.760 WARN  [http-nio-8082-exec-2] o.s.core.service.OpenAPIService - found more than one OpenAPIDefinition class. springdoc-openapi will be using the first one found.
+2026-10-25 21:57:43.921 WARN  [http-nio-8082-exec-2] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:57:43.922 WARN  [http-nio-8082-exec-2] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:57:43.937 WARN  [http-nio-8082-exec-2] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:57:43.937 WARN  [http-nio-8082-exec-2] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:57:43.953 WARN  [http-nio-8082-exec-2] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:57:43.955 WARN  [http-nio-8082-exec-2] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 21:57:43.972 INFO  [http-nio-8082-exec-2] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 217 ms
+2026-10-25 21:58:11.454 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-25 22:00:33.543 INFO  [http-nio-8082-exec-6] p.c.m.Controller.ProductoController - GET /productos filtro=ProductoFiltro(nombre=null, categoria=null, rareza=null, idVendedor=null)
+2026-10-25 22:00:33.717 DEBUG [http-nio-8082-exec-6] p.c.m.Service.base.BaseServiceImpl - Buscando Producto filtro=ProductoFiltro(nombre=null, categoria=null, rareza=null, idVendedor=null)
+2026-10-25 22:00:33.734 DEBUG [http-nio-8082-exec-6] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.categoria,
+        p1_0.estado_conservacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.id_vendedor,
+        p1_0.nombre,
+        p1_0.precio_referencia,
+        p1_0.rareza,
+        p1_0.stock,
+        p1_0.url_imagen,
+        p1_0.version 
+    from
+        producto p1_0 
+    where
+        p1_0.activo=true 
+        and (
+            ? is null 
+            or p1_0.id_vendedor=?
+        ) 
+        and (
+            ? is null 
+            or p1_0.categoria=?
+        ) 
+        and (
+            ? is null 
+            or p1_0.rareza=?
+        ) 
+        and (
+            ? is null 
+            or lower(p1_0.nombre) like lower(('%'||cast(? as varchar)||'%')) escape ''
+        ) 
+    fetch
+        first ? rows only
+2026-10-25 22:03:11.458 INFO  [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-25 22:04:53.312 INFO  [http-nio-8082-exec-9] p.c.m.Controller.ProductoController - GET /productos/1
+2026-10-25 22:04:55.137 DEBUG [http-nio-8082-exec-9] p.c.m.Config.LoggingCache - [cache:productos] GET 1 -> MISS
+2026-10-25 22:04:55.173 DEBUG [http-nio-8082-exec-9] p.c.m.Service.base.BaseServiceImpl - Obteniendo Producto 1
+2026-10-25 22:04:55.195 DEBUG [http-nio-8082-exec-9] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.categoria,
+        p1_0.estado_conservacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.id_vendedor,
+        p1_0.nombre,
+        p1_0.precio_referencia,
+        p1_0.rareza,
+        p1_0.stock,
+        p1_0.url_imagen,
+        p1_0.version 
+    from
+        producto p1_0 
+    where
+        p1_0.id=?
+2026-10-25 22:04:55.971 DEBUG [http-nio-8082-exec-9] p.c.m.Config.LoggingCache - [cache:productos] PUT 1
+2026-10-25 22:06:46.454 INFO  [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO with eureka with status DOWN
+2026-10-25 22:06:46.454 INFO  [SpringApplicationShutdownHook] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1792976806454, current=DOWN, previous=UP]
+2026-10-25 22:06:46.455 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO/app-lavitrinacoleccionistas-ms-catalogo:8082: registering service...
+2026-10-25 22:06:46.459 INFO  [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-25 22:06:46.461 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO/app-lavitrinacoleccionistas-ms-catalogo:8082 - registration status: 204
+2026-10-25 22:06:46.475 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-25 22:06:46.501 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-25 22:06:46.506 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-25 22:06:46.509 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-25 22:06:46.509 INFO  [SpringApplicationShutdownHook] c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2026-10-25 22:06:49.511 INFO  [SpringApplicationShutdownHook] c.netflix.discovery.DiscoveryClient - Unregistering ...
+2026-10-25 22:06:49.518 INFO  [SpringApplicationShutdownHook] c.netflix.discovery.DiscoveryClient - DiscoveryClient_APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO/app-lavitrinacoleccionistas-ms-catalogo:8082 - deregister  status: 200
+2026-10-25 22:06:49.518 INFO  [SpringApplicationShutdownHook] c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
+2026-10-25 22:06:54.103 INFO  [restartedMain] p.c.m.Ms1LvcCatalogoApplication - Starting Ms1LvcCatalogoApplication using Java 25.0.4.1 with PID 4868 (C:\Users\DELL\Desktop\LaVitrinaColeccionistas\app-lavitrinacoleccionitas-ms-catalogos\target\classes started by DELL in C:\Users\DELL\Desktop\LaVitrinaColeccionistas\app-lavitrinacoleccionitas-ms-catalogos)
+2026-10-25 22:06:54.106 INFO  [restartedMain] p.c.m.Ms1LvcCatalogoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-25 22:06:54.160 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-25 22:06:54.160 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-25 22:06:54.921 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-25 22:06:54.921 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-25 22:06:55.051 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 121 ms. Found 4 JPA repository interfaces.
+2026-10-25 22:06:55.336 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-25 22:06:55.337 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-10-25 22:06:55.361 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface py.com.ms1lvccatalogo.Repository.IBaseRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-25 22:06:55.363 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface py.com.ms1lvccatalogo.Repository.IOfertaRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-25 22:06:55.364 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface py.com.ms1lvccatalogo.Repository.IProductoRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-25 22:06:55.364 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface py.com.ms1lvccatalogo.Repository.IPublicacionRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-25 22:06:55.364 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2026-10-25 22:06:55.647 INFO  [restartedMain] o.s.cloud.context.scope.GenericScope - BeanFactory id=8b56c125-3292-34c2-ad78-74a8ae347970
+2026-10-25 22:06:56.166 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2026-10-25 22:06:56.178 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-25 22:06:56.178 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-25 22:06:56.237 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2076 ms
+2026-10-25 22:06:56.419 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-25 22:06:57.073 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@450536ae
+2026-10-25 22:06:57.074 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-25 22:06:57.443 INFO  [restartedMain] liquibase.database - Set default schema name to public
+2026-10-25 22:06:58.976 INFO  [restartedMain] liquibase.changelog - Reading from public.databasechangelog
+2026-10-25 22:06:59.473 INFO  [restartedMain] liquibase.ui - Database is up to date, no changesets to execute
+2026-10-25 22:06:59.507 INFO  [restartedMain] liquibase.changelog - Reading from public.databasechangelog
+2026-10-25 22:06:59.571 INFO  [restartedMain] liquibase.util - UPDATE SUMMARY
+2026-10-25 22:06:59.571 INFO  [restartedMain] liquibase.util - Run:                          0
+2026-10-25 22:06:59.572 INFO  [restartedMain] liquibase.util - Previously run:              19
+2026-10-25 22:06:59.572 INFO  [restartedMain] liquibase.util - Filtered out:                 0
+2026-10-25 22:06:59.572 INFO  [restartedMain] liquibase.util - -------------------------------
+2026-10-25 22:06:59.572 INFO  [restartedMain] liquibase.util - Total change sets:           19
+2026-10-25 22:06:59.574 INFO  [restartedMain] liquibase.util - Update summary generated
+2026-10-25 22:06:59.575 INFO  [restartedMain] liquibase.command - Command execution complete
+2026-10-25 22:06:59.713 INFO  [restartedMain] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-25 22:06:59.766 INFO  [restartedMain] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-25 22:07:00.183 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-25 22:07:00.437 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://aws-0-sa-east-1.pooler.supabase.com:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.6
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-25 22:07:01.526 INFO  [restartedMain] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-25 22:07:01.534 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-25 22:07:01.644 INFO  [restartedMain] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-25 22:07:04.482 INFO  [restartedMain] o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestClient.
+2026-10-25 22:07:04.521 WARN  [restartedMain] o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-10-25 22:07:04.611 INFO  [restartedMain] o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2026-10-25 22:07:04.653 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2026-10-25 22:07:04.660 INFO  [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2026-10-25 22:07:04.670 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2026-10-25 22:07:04.670 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2026-10-25 22:07:04.670 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2026-10-25 22:07:04.670 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Application is null : false
+2026-10-25 22:07:04.670 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2026-10-25 22:07:04.670 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2026-10-25 22:07:04.671 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2026-10-25 22:07:05.123 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - The response status is 200
+2026-10-25 22:07:05.127 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2026-10-25 22:07:05.130 INFO  [restartedMain] c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-10-25 22:07:05.135 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1792976825133 with initial instances count: 2
+2026-10-25 22:07:05.145 INFO  [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry - Registering application APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO with eureka with status UP
+2026-10-25 22:07:05.146 INFO  [restartedMain] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1792976825146, current=UP, previous=STARTING]
+2026-10-25 22:07:05.147 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO/app-lavitrinacoleccionistas-ms-catalogo:8082: registering service...
+2026-10-25 22:07:05.170 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/api'
+2026-10-25 22:07:05.172 INFO  [restartedMain] o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8082
+2026-10-25 22:07:05.200 INFO  [restartedMain] p.c.m.Ms1LvcCatalogoApplication - Started Ms1LvcCatalogoApplication in 11.614 seconds (process running for 12.627)
+2026-10-25 22:07:05.202 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO/app-lavitrinacoleccionistas-ms-catalogo:8082 - registration status: 204
+2026-10-25 22:07:38.299 INFO  [http-nio-8082-exec-1] o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-25 22:07:38.299 INFO  [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-10-25 22:07:38.299 INFO  [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-10-25 22:07:38.859 WARN  [http-nio-8082-exec-1] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 22:07:38.861 WARN  [http-nio-8082-exec-1] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 22:07:38.906 WARN  [http-nio-8082-exec-1] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 22:07:38.906 WARN  [http-nio-8082-exec-1] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 22:07:38.929 WARN  [http-nio-8082-exec-1] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 22:07:38.929 WARN  [http-nio-8082-exec-1] o.s.core.utils.SpringDocUtils - Json Processing Exception occurred: Cannot construct instance of `java.util.HashSet` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('integer')
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 1, column: 9] (through reference chain: io.swagger.v3.oas.models.media.JsonSchema["type"])
+2026-10-25 22:07:38.968 INFO  [http-nio-8082-exec-1] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 601 ms
+2026-10-25 22:08:05.970 INFO  [http-nio-8082-exec-3] p.c.m.Controller.ProductoController - DELETE /productos/1
+2026-10-25 22:08:06.061 DEBUG [http-nio-8082-exec-3] org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.categoria,
+        p1_0.estado_conservacion,
+        p1_0.fecha_actualizacion,
+        p1_0.fecha_creacion,
+        p1_0.id_vendedor,
+        p1_0.nombre,
+        p1_0.precio_referencia,
+        p1_0.rareza,
+        p1_0.stock,
+        p1_0.url_imagen,
+        p1_0.version 
+    from
+        producto p1_0 
+    where
+        p1_0.id=?
+2026-10-25 22:08:06.137 DEBUG [http-nio-8082-exec-3] p.c.m.S.producto.ProductoServiceImpl - Eliminando producto 1
+2026-10-25 22:08:07.787 DEBUG [http-nio-8082-exec-3] p.c.m.Config.LoggingCache - [cache:publicaciones] CLEAR (dominio completo)
+2026-10-25 22:08:07.787 DEBUG [http-nio-8082-exec-3] p.c.m.S.producto.ProductoServiceImpl - CACHE CLEAR dominio=publicaciones por cambio en producto
+2026-10-25 22:08:07.818 DEBUG [http-nio-8082-exec-3] org.hibernate.SQL - 
+    update
+        producto 
+    set
+        activo=?,
+        categoria=?,
+        estado_conservacion=?,
+        fecha_actualizacion=?,
+        id_vendedor=?,
+        nombre=?,
+        precio_referencia=?,
+        rareza=?,
+        stock=?,
+        url_imagen=?,
+        version=? 
+    where
+        id=?
+2026-10-25 22:08:07.968 DEBUG [http-nio-8082-exec-3] p.c.m.Config.LoggingCache - [cache:productos] EVICT 1
+2026-10-25 22:08:41.048 INFO  [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO with eureka with status DOWN
+2026-10-25 22:08:41.049 INFO  [SpringApplicationShutdownHook] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1792976921049, current=DOWN, previous=UP]
+2026-10-25 22:08:41.049 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO/app-lavitrinacoleccionistas-ms-catalogo:8082: registering service...
+2026-10-25 22:08:41.052 INFO  [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-25 22:08:41.057 INFO  [DiscoveryClient-InstanceInfoReplicator-%d] c.netflix.discovery.DiscoveryClient - DiscoveryClient_APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO/app-lavitrinacoleccionistas-ms-catalogo:8082 - registration status: 204
+2026-10-25 22:08:41.068 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-25 22:08:41.084 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-25 22:08:41.087 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-25 22:08:41.118 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-25 22:08:41.119 INFO  [SpringApplicationShutdownHook] c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2026-10-25 22:08:44.121 INFO  [SpringApplicationShutdownHook] c.netflix.discovery.DiscoveryClient - Unregistering ...
+2026-10-25 22:08:44.126 INFO  [SpringApplicationShutdownHook] c.netflix.discovery.DiscoveryClient - DiscoveryClient_APP-LAVITRINACOLECCIONISTAS-MS-CATALOGO/app-lavitrinacoleccionistas-ms-catalogo:8082 - deregister  status: 200
+2026-10-25 22:08:44.128 INFO  [SpringApplicationShutdownHook] c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
