@@ -25,7 +25,7 @@ public class ProductoController {
     private final IProductoService service;
 
     @PostMapping
-    @PreAuthorize("hasAnyRole('ADMIN','VENDEDOR')")
+    @PreAuthorize("hasAnyRole('ADMIN','VENDEDOR','COMPRADOR')")
     public ResponseEntity<ProductoDTO> crear(@Valid @RequestBody ProductoCreateDTO dto) {
         log.info("POST /productos");
         return ResponseEntity.status(HttpStatus.CREATED).body(service.crear(dto));
@@ -45,14 +45,14 @@ public class ProductoController {
     }
 
     @PutMapping("/{id}")
-    @PreAuthorize("hasAnyRole('ADMIN','VENDEDOR')")
+    @PreAuthorize("hasAnyRole('ADMIN','VENDEDOR','COMPRADOR')")
     public ProductoDTO actualizar(@PathVariable Long id, @Valid @RequestBody ProductoUpdateDTO dto) {
         log.info("PUT /productos/{}", id);
         return service.actualizar(id, dto);
     }
 
     @DeleteMapping("/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN','VENDEDOR','COMPRADOR')")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void eliminar(@PathVariable Long id) {
         log.info("DELETE /productos/{}", id);
