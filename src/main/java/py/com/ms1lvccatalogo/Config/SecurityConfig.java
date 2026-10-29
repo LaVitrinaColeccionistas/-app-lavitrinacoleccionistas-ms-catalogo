@@ -26,12 +26,12 @@ import py.com.ms1lvccatalogo.security.JwtProps;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 import java.util.Base64;
+
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
 @EnableConfigurationProperties(JwtProps.class)
 public class SecurityConfig {
-
 
     @Bean
     SecretKey jwtKey(JwtProps p) {
@@ -50,6 +50,7 @@ public class SecurityConfig {
         decoder.setJwtValidator(validator);
         return decoder;
     }
+
     @Bean
     JwtAuthenticationConverter jwtAuthenticationConverter() {
         JwtGrantedAuthoritiesConverter g = new JwtGrantedAuthoritiesConverter();
@@ -71,9 +72,13 @@ public class SecurityConfig {
                 .authorizeHttpRequests(a -> a
                         .requestMatchers("/swagger-ui/**", "/swagger-ui.html", "/v3/api-docs/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/productos/**", "/publicaciones/**").permitAll()
-                        .requestMatchers(HttpMethod.DELETE, "/productos/**").hasRole(TipoRol.ADMIN.name())
-                        .requestMatchers("/productos/**", "/publicaciones/**")
-                        .hasAnyRole(TipoRol.ADMIN.name(), TipoRol.VENDEDOR.name())
+                        .requestMatchers("/productos/**").hasAnyRole(
+                                TipoRol.ADMIN.name(),
+                                TipoRol.VENDEDOR.name(),
+                                TipoRol.COMPRADOR.name())
+                        .requestMatchers("/publicaciones/**").hasAnyRole(
+                                TipoRol.ADMIN.name(),
+                                TipoRol.VENDEDOR.name())
                         .requestMatchers("/ofertas/**").authenticated()
                         .anyRequest().authenticated())
                 .oauth2ResourceServer(o -> o
