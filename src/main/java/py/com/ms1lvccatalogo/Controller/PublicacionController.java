@@ -41,6 +41,13 @@ public class PublicacionController {
         return service.buscarPagina(filtro, pageable);
     }
 
+    @GetMapping("/{idPublicacion}/detalles")
+    public DetallePublicacionPageDTO listarDetalles(@PathVariable Long idPublicacion,
+                                                    @ParameterObject Pageable pageable) {
+        log.info("GET /publicaciones/{}/detalles", idPublicacion);
+        return service.listarDetalles(idPublicacion, pageable);
+    }
+
     @PutMapping("/{id}")
     @PreAuthorize("hasAnyRole('ADMIN','VENDEDOR')")
     public PublicacionDTO actualizar(@PathVariable Long id, @Valid @RequestBody PublicacionUpdateDTO dto) {

@@ -80,6 +80,7 @@ public class SecurityConfig {
                                 TipoRol.ADMIN.name(),
                                 TipoRol.VENDEDOR.name())
                         .requestMatchers("/ofertas/**").authenticated()
+                        .requestMatchers("/reservas/**").authenticated()
                         .anyRequest().authenticated())
                 .oauth2ResourceServer(o -> o
                         .jwt(j -> j.jwtAuthenticationConverter(conv))

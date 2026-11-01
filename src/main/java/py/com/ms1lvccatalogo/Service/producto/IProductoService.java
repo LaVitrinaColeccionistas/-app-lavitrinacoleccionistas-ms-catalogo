@@ -12,5 +12,6 @@ import py.com.ms1lvccatalogo.filtro.ProductoFiltro;
 public interface IProductoService extends IBaseService<ProductoCreateDTO, ProductoUpdateDTO, ProductoDTO, ProductoFiltro> {
     ProductoPageDTO buscarPagina(ProductoFiltro filtro, Pageable pageable);
     Producto obtenerEntidad(Long id);
+    Producto obtenerEntidadBloqueada(Long id);
     void eliminar(Long id);
 }

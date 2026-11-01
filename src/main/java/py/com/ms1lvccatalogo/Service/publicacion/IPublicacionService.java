@@ -11,5 +11,6 @@ public interface IPublicacionService
     PublicacionPageDTO buscarPagina(PublicacionFiltro filtro, Pageable pageable);
     PublicacionDTO actualizarEstado(Long id, PublicacionEstadoUpdateDTO dto);
     Publicacion obtenerEntidad(Long id);
+    DetallePublicacionPageDTO listarDetalles(Long idPublicacion, Pageable pageable);
     void eliminar(Long id);
 }

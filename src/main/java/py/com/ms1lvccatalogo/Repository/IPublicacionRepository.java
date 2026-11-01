@@ -11,7 +11,7 @@ import py.com.lavitrinacoleccionistas.enums.TipoVenta;
 public interface IPublicacionRepository extends IBaseRepository<Publicacion, Long> {
     @Query("""
        SELECT p FROM Publicacion p
-       WHERE p.estadoPublicacion <> py.com.lavitrinacoleccionistas.enums.EstadoPublicacion.CANCELADA
+       WHERE p.estadoPublicacion <> py.com.lavitrinacoleccionistas.enums.EstadoPublicacion.ELIMINADA
        AND (:idVendedor IS NULL OR p.idVendedor = :idVendedor)
        AND (:estado     IS NULL OR p.estadoPublicacion = :estado)
        AND (:tipoVenta  IS NULL OR p.tipoVenta = :tipoVenta)

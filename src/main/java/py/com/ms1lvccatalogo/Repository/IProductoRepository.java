@@ -1,10 +1,14 @@
 package py.com.ms1lvccatalogo.Repository;
 
 import org.springframework.data.domain.Page;
+import jakarta.persistence.LockModeType;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.Lock;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import py.com.lavitrinacoleccionistas.entity.Producto;
+
+import java.util.Optional;
 
 public interface IProductoRepository extends IBaseRepository<Producto, Long> {
 
@@ -21,4 +25,8 @@ public interface IProductoRepository extends IBaseRepository<Producto, Long> {
                                     @Param("rareza") String rareza,
                                     @Param("nombre") String nombre,
                                     Pageable pageable);
+
+    @Lock(LockModeType.PESSIMISTIC_WRITE)
+    @Query("SELECT p FROM Producto p WHERE p.id = :id")
+    Optional<Producto> findByIdForUpdate(@Param("id") Long id);
 }

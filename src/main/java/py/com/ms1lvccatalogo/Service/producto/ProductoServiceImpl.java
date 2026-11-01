@@ -80,6 +80,16 @@ public class ProductoServiceImpl
         return p;
     }
 
+    @Transactional
+    public Producto obtenerEntidadBloqueada(Long id) {
+        Producto p = productoRepository.findByIdForUpdate(id)
+                .orElseThrow(() -> new EntityNotFoundException(nombreEntidad + " no encontrado: " + id));
+        if (!Boolean.TRUE.equals(p.getActivo())) {
+            throw new EntityNotFoundException(nombreEntidad + " no encontrado: " + id);
+        }
+        return p;
+    }
+
     @Override
     @Transactional
     @CacheEvict(cacheNames = RedisCacheConfig.PRODUCTOS, key = "#id")
