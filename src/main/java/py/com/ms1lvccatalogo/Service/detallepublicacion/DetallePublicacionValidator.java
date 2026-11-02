@@ -26,7 +26,7 @@ public class DetallePublicacionValidator {
 
     /**
      * Regla: la suma de cantidadPublicada de un producto en publicaciones ACTIVA/PAUSADA
-     * no puede superar producto.stock. El producto debe venir bloqueado (obtenerEntidadBloqueada).
+     * mas lo reservado de su stock libre no puede superar producto.stock. El producto debe venir bloqueado (obtenerEntidadBloqueada).
      */
     public void validar(Publicacion pub, Producto prod, Integer cantidad) {
         if (!pub.getIdVendedor().equals(prod.getIdVendedor())) {
@@ -35,7 +35,9 @@ public class DetallePublicacionValidator {
         long stock = prod.getStock() == null ? 0 : prod.getStock();
         long idPublicacion = pub.getId() == null ? SIN_PUBLICACION : pub.getId();
         long enOtras = detalleRepository.sumarPublicadoPorProducto(prod.getId(), ESTADOS_QUE_CUENTAN, idPublicacion);
-        long disponible = stock - enOtras;
+        // Stock libre apartado para intercambios: no se puede volver a publicar
+        long reservadoLibre = reservaRepository.sumarLibresPorProducto(prod.getId(), EstadoReserva.RESERVADA);
+        long disponible = stock - enOtras - reservadoLibre;
         if (cantidad > disponible) {
             throw new ConflictException("La cantidad supera el stock disponible para publicar del producto "
                     + prod.getId() + " (disponible: " + disponible + ")");

@@ -11,6 +11,9 @@ import java.util.List;
 @Mapper(config = IBaseMapperConfig.class)
 public interface ReservaStockMapper {
 
+    @Mapping(target = "origen", source = "tipoOrigen")
+    @Mapping(target = "idOrden", source = "idOrden")          // getter @Transient de la entidad
+    @Mapping(target = "idProducto", source = "producto.id")
     @Mapping(target = "idDetallePublicacion", source = "detallePublicacion.id")
     ReservaDTO toDTO(ReservaStock entity);
 

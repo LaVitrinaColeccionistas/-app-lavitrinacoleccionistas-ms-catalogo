@@ -1,5 +1,10 @@
 package py.com.ms1lvccatalogo.Service.oferta;
 
+import org.springframework.cache.Cache;
+import org.springframework.cache.CacheManager;
+import org.springframework.security.access.AccessDeniedException;
+import py.com.ms1lvccatalogo.Service.reserva.IReservaService;
+import py.com.ms1lvccatalogo.security.UsuarioActual;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
@@ -33,12 +38,17 @@ public class OfertaServiceImpl
 
     private final IOfertaRepository ofertaRepository;
     private final IPublicacionService publicacionService;
+    private final IReservaService reservaService;
+    private final CacheManager cacheManager;
 
     public OfertaServiceImpl(IOfertaRepository ofertaRepository, OfertaMapper mapper,
-                             IPublicacionService publicacionService) {
+                             IPublicacionService publicacionService, IReservaService reservaService,
+                             CacheManager cacheManager) {
         super(ofertaRepository, mapper, "Oferta");
         this.ofertaRepository = ofertaRepository;
         this.publicacionService = publicacionService;
+        this.reservaService = reservaService;
+        this.cacheManager = cacheManager;
     }
     @Override
     @Transactional(readOnly = true)
@@ -81,13 +91,43 @@ public class OfertaServiceImpl
     @Transactional
     @CachePut(cacheNames = RedisCacheConfig.OFERTAS, key = "#result.id")
     public OfertaDTO aceptar(Long id) {
-        return responder(id, EstadoOferta.ACEPTADA);
+        Oferta oferta = buscarPorId(id);
+        exigirPendiente(oferta);
+
+        Publicacion pub = oferta.getPublicacion();
+        if (!pub.getIdVendedor().equals(UsuarioActual.id())) {
+            throw new AccessDeniedException("Solo el vendedor de la publicacion puede aceptar la oferta");
+        }
+        if (pub.getEstadoPublicacion() != EstadoPublicacion.ACTIVA) {
+            throw new ConflictException("La publicacion no esta activa");
+        }
+
+        // Aparta todas las unidades de la publicacion para el comprador. Si alguna esta reservada
+        // por una orden, un intercambio u otra oferta aceptada, da 409 y no se acepta.
+        reservaService.reservarParaOferta(oferta);
+
+        LocalDateTime ahora = LocalDateTime.now();
+        oferta.setEstadoOferta(EstadoOferta.ACEPTADA);
+        oferta.setFechaRespuesta(ahora);
+        OfertaDTO out = mapper.toDTO(repository.save(oferta));
+
+        int rechazadas = ofertaRepository.rechazarPendientesDePublicacion(pub.getId(), id, ahora);
+        if (rechazadas > 0) {
+            log.debug("Oferta {} aceptada: {} ofertas pendientes rechazadas", id, rechazadas);
+            Cache cache = cacheManager.getCache(RedisCacheConfig.OFERTAS);
+            if (cache != null) cache.clear();
+        }
+        return out;
     }
 
     @Override
     @Transactional
     @CachePut(cacheNames = RedisCacheConfig.OFERTAS, key = "#result.id")
     public OfertaDTO rechazar(Long id) {
+        Oferta oferta = buscarPorId(id);
+        if (!oferta.getPublicacion().getIdVendedor().equals(UsuarioActual.id())) {
+            throw new AccessDeniedException("Solo el vendedor de la publicacion puede rechazar la oferta");
+        }
         return responder(id, EstadoOferta.RECHAZADA);
     }
 

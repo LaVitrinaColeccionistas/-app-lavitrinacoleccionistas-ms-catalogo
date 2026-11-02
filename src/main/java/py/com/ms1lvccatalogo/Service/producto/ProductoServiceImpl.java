@@ -1,5 +1,10 @@
 package py.com.ms1lvccatalogo.Service.producto;
 
+import py.com.lavitrinacoleccionistas.enums.EstadoPublicacion;
+import py.com.lavitrinacoleccionistas.enums.EstadoReserva;
+import py.com.ms1lvccatalogo.Repository.IDetallePublicacionRepository;
+import py.com.ms1lvccatalogo.Repository.IReservaStockRepository;
+import py.com.ms1lvccatalogo.exception.ConflictException;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.Cache;
@@ -32,12 +37,22 @@ public class ProductoServiceImpl
         extends BaseServiceImpl<Producto, ProductoCreateDTO, ProductoUpdateDTO, ProductoDTO, ProductoFiltro>
         implements IProductoService {
 
+    private static final long SIN_PUBLICACION = -1L;
+    private static final List<EstadoPublicacion> PUBLICADO =
+            List.of(EstadoPublicacion.ACTIVA, EstadoPublicacion.PAUSADA);
+
     private final IProductoRepository productoRepository;
+    private final IDetallePublicacionRepository detalleRepository;
+    private final IReservaStockRepository reservaRepository;
     private final CacheManager cacheManager;
 
-    public ProductoServiceImpl(IProductoRepository productoRepository, ProductoMapper productoMapper, CacheManager cacheManager) {
+    public ProductoServiceImpl(IProductoRepository productoRepository, ProductoMapper productoMapper,
+                               IDetallePublicacionRepository detalleRepository,
+                               IReservaStockRepository reservaRepository, CacheManager cacheManager) {
         super(productoRepository, productoMapper, "Producto");
         this.productoRepository = productoRepository;
+        this.detalleRepository = detalleRepository;
+        this.reservaRepository = reservaRepository;
         this.cacheManager = cacheManager;
     }
 
@@ -66,6 +81,16 @@ public class ProductoServiceImpl
     @Transactional
     @CachePut(cacheNames = RedisCacheConfig.PRODUCTOS, key = "#result.id")
     public ProductoDTO actualizar(Long id, ProductoUpdateDTO dto) {
+        if (dto.getStock() != null) {
+            // El stock no puede quedar por debajo de lo publicado + lo reservado del stock libre
+            Producto p = obtenerEntidadBloqueada(id);
+            long comprometido = detalleRepository.sumarPublicadoPorProducto(id, PUBLICADO, SIN_PUBLICACION)
+                    + reservaRepository.sumarLibresPorProducto(id, EstadoReserva.RESERVADA);
+            if (dto.getStock() < comprometido) {
+                throw new ConflictException("El stock no puede ser menor a " + comprometido
+                        + " (unidades publicadas o reservadas de \"" + p.getNombre() + "\")");
+            }
+        }
         ProductoDTO actualizado = super.actualizar(id, dto);
         invalidarPublicaciones();
         return actualizado;
@@ -95,6 +120,9 @@ public class ProductoServiceImpl
     @CacheEvict(cacheNames = RedisCacheConfig.PRODUCTOS, key = "#id")
     public void eliminar(Long id) {
         Producto p = buscarPorId(id);
+        if (reservaRepository.existsPorProductoYEstado(id, EstadoReserva.RESERVADA)) {
+            throw new ConflictException("No se puede eliminar \"" + p.getNombre() + "\": tiene reservas vigentes");
+        }
         log.debug("Eliminando producto {}", id);
         p.setActivo(false);
         repository.save(p);
