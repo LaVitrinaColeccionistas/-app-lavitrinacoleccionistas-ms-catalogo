@@ -4,7 +4,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import py.com.lavitrinacoleccionistas.dto.ReservaDTO;
 import py.com.lavitrinacoleccionistas.entity.ReservaStock;
-import py.com.ms1lvccatalogo.Config.IBaseMapperConfig;
+import py.com.ms1lvccatalogo.config.IBaseMapperConfig;
 
 import java.util.List;
 

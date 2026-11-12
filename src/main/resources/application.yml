@@ -93,8 +93,8 @@ logging:
     file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n"
   level:
     root: ${LOG_LEVEL_ROOT:INFO}
-    py.com.ms1lvccatalogo.Controller: ${LOG_LEVEL_CONTROLLER:INFO}
-    py.com.ms1lvccatalogo.Service: ${LOG_LEVEL_SERVICE:DEBUG}
-    py.com.ms1lvccatalogo.Repository: ${LOG_LEVEL_REPOSITORY:DEBUG}
+    py.com.ms1lvccatalogo.controller: ${LOG_LEVEL_CONTROLLER:INFO}
+    py.com.ms1lvccatalogo.service: ${LOG_LEVEL_SERVICE:DEBUG}
+    py.com.ms1lvccatalogo.repository: ${LOG_LEVEL_REPOSITORY:DEBUG}
     org.hibernate.SQL: ${LOG_LEVEL_SQL:DEBUG}
-    py.com.ms1lvccatalogo.Config: ${LOG_LEVEL_CACHE:DEBUG}
+    py.com.ms1lvccatalogo.cache: ${LOG_LEVEL_CACHE:DEBUG}

@@ -7,9 +7,11 @@ import py.com.lavitrinacoleccionistas.dto.PublicacionCreateDTO;
 import py.com.lavitrinacoleccionistas.dto.PublicacionDTO;
 import py.com.lavitrinacoleccionistas.dto.PublicacionUpdateDTO;
 import py.com.lavitrinacoleccionistas.entity.Publicacion;
-import py.com.ms1lvccatalogo.Config.IBaseMapperConfig;
+import py.com.ms1lvccatalogo.config.IBaseMapperConfig;
 import py.com.lavitrinacoleccionistas.entity.DetallePublicacion;
 import py.com.lavitrinacoleccionistas.enums.EstadoPublicacion;
+import org.springframework.data.domain.Page;
+import py.com.lavitrinacoleccionistas.dto.PublicacionPageDTO;
 
 import java.math.BigDecimal;
 import java.util.Comparator;
@@ -95,4 +97,14 @@ public interface PublicacionMapper
     @Mapping(target = "detallePublicacion", ignore = true)
     @Mapping(target = "ofertas", ignore = true)
     void actualizarEntity(PublicacionUpdateDTO dto, @MappingTarget Publicacion entity);
+
+    default PublicacionPageDTO toPageDTO(Page<PublicacionDTO> page) {
+        PublicacionPageDTO out = new PublicacionPageDTO();
+        out.setContent(page.getContent());
+        out.setTotalElements(page.getTotalElements());
+        out.setTotalPages(page.getTotalPages());
+        out.setSize(page.getSize());
+        out.setNumber(page.getNumber());
+        return out;
+    }
 }
